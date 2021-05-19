@@ -1,0 +1,16 @@
+title: NetBLADE
+description: The NetBLADE framework for Bot attacks
+
+theme: jekyll-theme-minimal
+
+exclude:
+  - docker-compose.yml
+  - README.md
+
+collections:
+  tactics:
+    output: true
+  techniques:
+    output: true
+  subtechniques:
+    output: true
