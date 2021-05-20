@@ -1,5 +1,8 @@
+<table>
+    <thead>
+        <tr>
 {% for tactic in site.tactics %}
-<a href="{{ tactic.url }}">{{tactic.title}}</a>
+            <td><a href="{{ tactic.url }}">{{tactic.title}}</a></td>
 <ul>
 {%for technique in site.techniques %}
     {%if technique.parent == tactic.id %}
