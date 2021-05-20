@@ -18,6 +18,7 @@
         </ul>
         </td>
     {% endfor %}
+    </tr>
 </table>
 
 
