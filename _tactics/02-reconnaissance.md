@@ -1,5 +1,5 @@
 ---
-title: Reconnaissance
+title: 2. Reconnaissance
 layout: default
 layout: item
 ---
