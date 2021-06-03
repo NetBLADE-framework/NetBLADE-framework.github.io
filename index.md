@@ -1,25 +1,16 @@
-<table>
-    <tr>
-    {% for tactic in site.tactics %}
-        <td><B><a href="{{ tactic.url }}">{{tactic.title}}</a></b>
-        <ul>
-        {%for technique in site.techniques %}
-        {%if technique.parent == tactic.id %}
-            <li><a href="{{ technique.url }}">{{technique.title}}</a></li>
-            <ul>
-            {%for subtechnique in site.subtechniques %}
-                {%if subtechnique.parent == technique.id %}
-                <li><a href="{{ subtechnique.url }}">{{subtechnique.title}}</a></li>
-                {% endif %}
-            {% endfor %}
-            </ul>
-        {% endif %}
-        {% endfor %}
-        </ul>
-        </td>
-    {% endfor %}
-    </tr>
-</table>
+---
+# You don't need to edit this file, it's empty on purpose.
+# Edit theme's home layout instead if you wanna make some changes
+# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
+layout: collection
 
+collection: tactics
+entries_layout: grid
+show_excerpts: false
 
+author_profile: false
+sidebar: false
+---
+
+Some content here about NetBLADE, what it is and why it's awesome :)

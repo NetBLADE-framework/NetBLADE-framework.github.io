@@ -1,16 +1,6 @@
 ---
-layout: default
+layout: single
 ---
-<!DOCTYPE html>
-<html>
-
-  {% include head.html %}
-
-  <body>
-
-    {% include header.html %}
-      
-<h1>{{page.title}}</h1>
 <p>{% if page.parent %}
     Parent: <a href="{{page.parent}}">{{page.parent}}</a>
 {%endif%}
@@ -31,8 +21,3 @@ layout: default
 {% endfor %}
 </ul>
 
-      {% include footer.html %}
-
-  </body>
-
-</html>

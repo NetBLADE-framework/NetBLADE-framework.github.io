@@ -1,5 +1,5 @@
 ---
-title: 6. Post-Attack
+title: Post-Attack
 layout: default
 layout: item
 ---
