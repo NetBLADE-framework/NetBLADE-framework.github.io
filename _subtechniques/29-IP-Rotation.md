@@ -1,6 +1,6 @@
 ---
 title: IP Rotation
-parent: /techniques/09-Proxying
+parent: /techniques/09-proxying
 layout: item
 ---
 

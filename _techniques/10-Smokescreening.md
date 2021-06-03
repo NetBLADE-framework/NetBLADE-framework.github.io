@@ -1,6 +1,6 @@
 ---
 title: Smokescreening
-parent: /tactics/03-Defence-Bypass
+parent: /tactics/03-defence-bypass
 layout: item
 ---
 

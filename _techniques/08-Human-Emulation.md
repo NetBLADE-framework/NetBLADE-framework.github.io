@@ -1,6 +1,6 @@
 ---
 title: Human Emulation
-parent: /tactics/03-Defence-Bypass
+parent: /tactics/03-defence-bypass
 layout: item
 ---
 

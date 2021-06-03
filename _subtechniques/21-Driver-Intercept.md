@@ -1,6 +1,6 @@
 ---
 title: Driver Intercept
-parent: /techniques/25-Delivery-Redirect
+parent: /techniques/25-delivery-redirect
 layout: item
 ---
 

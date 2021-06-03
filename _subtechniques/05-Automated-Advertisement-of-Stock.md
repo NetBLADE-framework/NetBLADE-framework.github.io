@@ -1,6 +1,6 @@
 ---
 title: Automated Advertisement of Stock
-parent: /techniques/23-Reporting
+parent: /techniques/23-reporting
 layout: item
 ---
 

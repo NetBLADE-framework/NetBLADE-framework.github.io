@@ -1,6 +1,6 @@
 ---
 title: Target-Diversification
-parent: /techniques/10-Smokescreening
+parent: /techniques/10-smokescreening
 layout: item
 ---
 

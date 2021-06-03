@@ -1,6 +1,6 @@
 ---
 title: Automated Bid
-parent: /techniques/21-Resale
+parent: /techniques/21-resale
 layout: item
 ---
 

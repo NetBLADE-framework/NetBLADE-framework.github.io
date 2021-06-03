@@ -1,6 +1,6 @@
 ---
 title: Fake Credibility Generation
-parent: /techniques/08-Human-Emulation
+parent: /techniques/08-human-emulation
 layout: item
 ---
 

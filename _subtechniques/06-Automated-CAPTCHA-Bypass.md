@@ -1,6 +1,6 @@
 ---
 title: Automated CAPTCHA Bypass
-parent: /techniques/07-CAPTCHA-Bypass
+parent: /techniques/07-captcha-bypass
 layout: item
 ---
 

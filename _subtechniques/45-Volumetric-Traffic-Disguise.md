@@ -1,6 +1,6 @@
 ---
 title: Volumetric Traffic Disguise
-parent: /techniques/10-Smokescreening
+parent: /techniques/10-smokescreening
 layout: item
 ---
 

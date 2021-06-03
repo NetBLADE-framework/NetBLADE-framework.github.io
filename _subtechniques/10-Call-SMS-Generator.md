@@ -1,6 +1,6 @@
 ---
 title: Call/SMS Generator
-parent: /techniques/11-Account-Creation
+parent: /techniques/11-account-creation
 layout: item
 ---
 

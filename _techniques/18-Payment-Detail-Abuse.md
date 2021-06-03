@@ -1,6 +1,6 @@
 ---
 title: Payment Detail Abuse
-parent: /tactics/05-Attack-Execution
+parent: /tactics/05-attack-execution
 layout: item
 ---
 

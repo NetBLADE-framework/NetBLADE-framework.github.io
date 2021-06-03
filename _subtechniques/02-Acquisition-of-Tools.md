@@ -1,6 +1,6 @@
 ---
 title: Acquisition of Tools
-parent: /techniques/13-Tool-Development
+parent: /techniques/13-tool-development
 layout: item
 ---
 

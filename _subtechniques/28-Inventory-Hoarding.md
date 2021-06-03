@@ -1,6 +1,6 @@
 ---
 title: Inventory hoarding
-parent: /techniques/15-Spinning
+parent: /techniques/15-spinning
 layout: item
 ---
 

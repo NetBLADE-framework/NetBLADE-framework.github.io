@@ -1,6 +1,6 @@
 ---
 title: Resale
-parent: /tactics/06-Post-Attack
+parent: /tactics/06-post-attack
 layout: item
 ---
 

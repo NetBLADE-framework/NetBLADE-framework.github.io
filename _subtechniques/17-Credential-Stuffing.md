@@ -1,6 +1,6 @@
 ---
 title: Credential Stuffing
-parent: /techniques/24-Account-Takeover
+parent: /techniques/24-account-takeover
 layout: item
 ---
 

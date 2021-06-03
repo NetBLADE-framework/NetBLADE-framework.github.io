@@ -1,6 +1,6 @@
 ---
 title: Gift Card Abuse
-parent: /techniques/18-Payment-Detail-Abuse
+parent: /techniques/18-payment-detail-abuse
 layout: item
 ---
 

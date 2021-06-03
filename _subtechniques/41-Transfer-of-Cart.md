@@ -1,6 +1,6 @@
 ---
 title: Transfer of Cart
-parent: /techniques/15-Spinning
+parent: /techniques/15-spinning
 layout: item
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Account Creation
-parent: /tactics/04-Attack-Preparation
+parent: /tactics/04-attack-preparation
 layout: item
 ---
 

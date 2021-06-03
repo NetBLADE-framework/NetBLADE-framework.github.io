@@ -1,6 +1,6 @@
 ---
 title: Watch Media
-parent: /techniques/22-Fake-Interaction
+parent: /techniques/22-fake-interaction
 layout: item
 ---
 

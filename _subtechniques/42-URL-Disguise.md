@@ -1,6 +1,6 @@
 ---
 title: URL Disguise
-parent: /techniques/01=website-creation
+parent: /techniques/01-website-creation
 layout: item
 ---
 

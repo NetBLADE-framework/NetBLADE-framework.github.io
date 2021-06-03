@@ -1,6 +1,6 @@
 ---
 title: Automated Add to Cart
-parent: /techniques/14-Automated-Transaction
+parent: /techniques/14-automated-transaction
 layout: item
 ---
 

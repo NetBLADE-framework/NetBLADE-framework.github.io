@@ -1,6 +1,6 @@
 ---
 title: Fake Identity
-parent: /techniques/19-Invoice-Abuse
+parent: /techniques/19-invoice-abuse
 layout: item
 ---
 
