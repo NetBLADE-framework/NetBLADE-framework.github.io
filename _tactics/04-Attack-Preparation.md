@@ -1,5 +1,5 @@
 ---
-title: 4. Attack Preparation
+title: Attack Preparation
 layout: default
 layout: item
 ---

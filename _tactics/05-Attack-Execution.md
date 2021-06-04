@@ -1,5 +1,5 @@
 ---
-title: 5. Attack Execution
+title: Attack Execution
 layout: default
 layout: item
 ---

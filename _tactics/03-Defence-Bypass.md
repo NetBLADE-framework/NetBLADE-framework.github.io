@@ -1,5 +1,5 @@
 ---
-title: 3. Defence Bypass
+title: Defence Bypass
 layout: default
 layout: item
 ---
