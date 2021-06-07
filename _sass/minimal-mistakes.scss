@@ -7,6 +7,9 @@
 $primary-color: #fff; 
 
 
+$doc-font-size: 14 !default;
+
+
 /* Variables */
 @import "minimal-mistakes/variables";
 
@@ -46,7 +49,7 @@ $primary-color: #fff;
 /* MG Cusotmisations */
 
 
-
+// Front-page customisations
 div.archive {
     float: left;
     width: 100%;
@@ -55,7 +58,7 @@ div.archive {
 .entries-grid > .grid__item {
     padding: 3px;
     background-color: #000;
-    color: #fff;
+    color: $primary-color;
     
 }
 .grid__item .archive__item {
@@ -99,17 +102,18 @@ div.archive {
     background-color: #000;
 }
 
-// .masthead, .greedy-nav a {
-//     color: #fff;
-// }
-
-// .masthead, .greedy-nav a:hover {
-//     color: #fff;
-// }
-
 .archive {
     padding-left: 0px;
     padding-right: 0px;
+}
+
+// End of front-page
+
+// page content customisations
+
+
+.page__content p, .page__content li, .page__content dl {
+    font-size: 14pt;
 }
 
 /* END*/
