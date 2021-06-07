@@ -4,23 +4,8 @@
  * Licensed under MIT (https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE)
 */
 
-/* MG Cusotmisations */
-div.archive {
-    float: left;
-    width: 100%;
-}
+$primary-color: #fff; 
 
-.entries-grid > .grid__item {
-    border: 1px solid #888;
-    border-radius: 10px;
-    padding: 3px;
-    background-color: #ddd;
-}
-
-.grid__item h2.archive__item-title {
-    font-size: 12pt;
-}
-/* END*/
 
 /* Variables */
 @import "minimal-mistakes/variables";
@@ -56,3 +41,69 @@ div.archive {
 @import "minimal-mistakes/archive";
 @import "minimal-mistakes/sidebar";
 @import "minimal-mistakes/print";
+
+
+/* MG Cusotmisations */
+
+
+
+div.archive {
+    float: left;
+    width: 100%;
+}
+
+.entries-grid > .grid__item {
+    padding: 3px;
+    background-color: #000;
+    color: #fff;
+    
+}
+.grid__item .archive__item {
+    height: 1.7em;
+}
+.grid__item h2.archive__item-title {
+    font-size: 12pt;
+}
+.grid__item h2.archive__item-title > a {
+    color: $primary-color;
+    text-decoration: none;
+
+    &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 4px;
+        background: $primary-color;
+        width: 100%;
+        -webkit-transition: $global-transition;
+        transition: $global-transition;
+        -webkit-transform: scaleX(0) translate3d(0, 0, 0);
+        transform: scaleX(0) translate3d(0, 0, 0); // hide
+      }
+
+      &:hover:after {
+        -webkit-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+        transform: scaleX(1); // reveal
+      }
+}
+
+.masthead, .greedy-nav  {
+    background-color: #000;
+}
+
+// .masthead, .greedy-nav a {
+//     color: #fff;
+// }
+
+// .masthead, .greedy-nav a:hover {
+//     color: #fff;
+// }
+
+.archive {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/* END*/

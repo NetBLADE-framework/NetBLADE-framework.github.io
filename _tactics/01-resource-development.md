@@ -1,5 +1,5 @@
 ---
-title: Resource Development (pre-attack)
+title: Resource Development
 id: resource_development
 layout: item
 ---
