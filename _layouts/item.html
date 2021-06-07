@@ -21,18 +21,18 @@ layout: single
 
 {% if techniques.size > 0 %}
     <h2>Techniques</h2>
-    <ul>
+    <table>
         {%for technique in techniques %}
-            <li><a href="{{ technique.url }}">{{technique.title}}</a></li>
+            <tr><td><a href="{{ technique.url }}">{{technique.title}}</a></td></tr>
         {%endfor%}
-    </ul>
+    </table>
 {%endif%}
 
 {% if subtechniques.size > 0 %}
     <h2>Subtechniques</h2>
-    <ul>
+    <table>
         {%for subtechnique in subtechniques %}
-            <li><a href="{{ subtechnique.url }}">{{subtechnique.title}}</a></li>
+            <tr><td><a href="{{ subtechnique.url }}">{{subtechnique.title}}</a></td></tr>
         {%endfor%}
-    </ul>
+    </table>
 {%endif%}
