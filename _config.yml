@@ -17,6 +17,8 @@ atom_feed:
   hide: true
 
 collections:
+  pages:
+    output: true
   tactics:
     output: true
   techniques:
