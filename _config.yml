@@ -3,7 +3,7 @@ description: The NetBLADE framework for Bot attacks
 
 remote_theme: "mmistakes/minimal-mistakes@4.23.0"
 
-logo: "/assets/Netblade_white_logo.png"
+logo: "/assets/Netblade_white_logo.svg"
 masthead_title: false
 
 exclude:

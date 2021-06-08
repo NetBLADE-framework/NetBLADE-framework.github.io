@@ -124,7 +124,9 @@ div.archive {
 // Logo customisations
 
 .site-logo img {
-    max-width: 150px;
+    max-width: 200px;
+    min-width: 150px;
+    max-height: unset;
 }
 // End of logo customisations
 
