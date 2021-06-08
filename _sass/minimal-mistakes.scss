@@ -119,6 +119,19 @@ div.archive {
     font-size: 14pt;
 }
 
+.page {
+    @include breakpoint($large) {
+      float: right;
+      width: calc(100% - #{0px});
+      padding-right: 0px;
+    }
+  
+    @include breakpoint($x-large) {
+      width: calc(100% - #{0px});
+      padding-right: 0px;
+    }
+}
+
 // end of page content customisations
 
 // Logo customisations
