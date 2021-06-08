@@ -62,13 +62,14 @@ div.archive {
     
 }
 .grid__item .archive__item {
-    height: 2.3em;
+    height: 90px;
     position: relative;
 }
 .grid__item h2.archive__item-title {
     font-size: 12pt;
+    font-weight: lighter;
     position:absolute;
-    top: 50%;
+    top: 28%;
     width: 100%;
     text-align: center;
     padding-bottom: 10px;
