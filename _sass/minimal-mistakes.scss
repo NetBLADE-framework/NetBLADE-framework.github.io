@@ -110,10 +110,18 @@ div.archive {
 // End of front-page
 
 // page content customisations
-
-
 .page__content p, .page__content li, .page__content dl {
     font-size: 14pt;
 }
+
+// end of page content customisations
+
+// Logo customisations
+
+.site-logo img {
+    max-width: 150px;
+}
+
+// End of logo customisations
 
 /* END*/

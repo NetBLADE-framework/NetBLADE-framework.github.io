@@ -3,12 +3,18 @@ description: The NetBLADE framework for Bot attacks
 
 remote_theme: "mmistakes/minimal-mistakes@4.23.0"
 
+logo: "/assets/Netblade_white_logo.png"
+masthead_title: false
+
 exclude:
   - docker-compose.yml
   - README.md
 
 plugins:
   - jekyll-include-cache
+
+atom_feed:
+  hide: true
 
 collections:
   tactics:
@@ -17,3 +23,4 @@ collections:
     output: true
   subtechniques:
     output: true
+  
