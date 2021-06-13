@@ -1,0 +1,22 @@
+---
+layout: archive
+permalink: /pages/resources/
+
+---
+
+{% capture written_label %}'None'{% endcapture %}
+
+{% for collection in site.collections %}
+  {% if collection.output == false or collection.label ==  "articles" or collection.label == "blogs" %}
+    {% capture label %}{{ collection.label }}{% endcapture %}
+    {% if label != written_label %}
+      <h2 id="{{ label | slugify }}" class="archive__subtitle">{{ label }}</h2>
+      {% capture written_label %}{{ label }}{% endcapture %}
+    {% endif %}
+  {% endif %}
+  {% for post in collection.docs %}
+    {% if collection.output == false or collection.label ==  "article" or collection.label == "blogs" %}
+      {% include archive-single.html %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}

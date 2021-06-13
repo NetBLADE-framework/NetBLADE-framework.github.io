@@ -44,7 +44,7 @@ $doc-font-size: 14 !default;
 @import "minimal-mistakes/archive";
 @import "minimal-mistakes/sidebar";
 @import "minimal-mistakes/print";
-
+@import "custom";
 
 /* MG Cusotmisations */
 
@@ -77,7 +77,7 @@ div.archive {
 .grid__item h2.archive__item-title > a {
     color: $primary-color;
     text-decoration: none;
-
+    font-weight: 500;
     &:after {
         content: "";
         position: absolute;

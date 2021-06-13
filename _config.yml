@@ -1,17 +1,19 @@
 title: NetBLADE
+locale: "en-US"
 description: The NetBLADE framework for Bot attacks
 
 remote_theme: "mmistakes/minimal-mistakes@4.23.0"
 
 logo: "/assets/Netblade_white_logo.svg"
 masthead_title: false
-
+breadcrumbs: true
 exclude:
   - docker-compose.yml
   - README.md
 
 plugins:
   - jekyll-include-cache
+  - jekyll-paginate
 
 atom_feed:
   hide: true
@@ -25,4 +27,20 @@ collections:
     output: true
   subtechniques:
     output: true
-  
+  blogs:
+    output: true
+  articles:
+    output: true  
+ 
+ # Site Footer
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/mmistakes"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/mmistakes"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/mmistakes"
