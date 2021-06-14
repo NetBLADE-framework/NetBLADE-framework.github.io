@@ -264,7 +264,6 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
-  jekyll-include-cache
 
 BUNDLED WITH
    2.2.2

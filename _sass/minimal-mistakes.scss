@@ -44,7 +44,7 @@ $doc-font-size: 14 !default;
 @import "minimal-mistakes/archive";
 @import "minimal-mistakes/sidebar";
 @import "minimal-mistakes/print";
-
+@import "custom";
 
 /* MG Cusotmisations */
 
@@ -73,11 +73,12 @@ div.archive {
     width: 100%;
     text-align: center;
     padding-bottom: 10px;
+    margin-bottom: 0;
 }
 .grid__item h2.archive__item-title > a {
     color: $primary-color;
     text-decoration: none;
-
+    font-weight: 300;
     &:after {
         content: "";
         position: absolute;
@@ -113,10 +114,14 @@ div.archive {
 // page content customisations
 .page__content p, .page__content li, .page__content dl {
     font-size: 14pt;
+    
 }
-
+.page__content p{
+    font-weight: 300;
+}
 .archive p {
     font-size: 14pt;
+    font-weight: 300;
 }
 
 .page {
