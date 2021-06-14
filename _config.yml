@@ -31,6 +31,8 @@ collections:
     output: true
   articles:
     output: true  
+  videos:
+    output: false
  
  # Site Footer
 footer:

@@ -41,3 +41,78 @@ and open the template in the editor.
         }
     }
 }
+.grid__item{
+    &.videos{
+        width: calc(100% - #{8px});
+        margin-right: 0;
+        margin-bottom: initial;
+        height: auto;
+        &:nth-child(4n){
+            margin-right: 0;
+        }
+        .archive__item{
+            height: auto;
+        }
+        .archive__item-teaser{
+            max-height: unset;
+        }
+        @include breakpoint($medium){
+            width: calc(50% - #{18px});
+        }
+        @include breakpoint($x-large){
+            width: calc(25% - #{18px});
+            margin-right: 16px;
+        }
+    }
+}
+.list__item{
+    &.articles{
+        .archive__item{
+            display: list-item;
+            color: $link-color;
+            margin-left: 1em;
+            margin-bottom: .6em;
+            &::marker{
+                font-size: .6em;
+            }
+            h2{
+                padding: 0;
+                margin: 0;
+                font-size: $type-size-5;
+                font-weight: 500;
+                a{
+                   text-decoration: none;
+                }
+            }
+            p{
+                padding: 0;
+                margin: 0;
+                color: $base00;
+                font-size: $type-size-6;
+            }
+        }
+    }
+    &.blogs{
+        .archive__item{
+            margin-bottom: .6em;
+            h2{
+                padding: 0;
+                margin: 0;
+                display: flex;
+                justify-content: space-between;
+                font-size: $type-size-5;
+                font-weight: 500;
+                a,span{
+                   text-decoration: none;
+                   color: $link-color;
+                }
+            }
+            p{
+                padding: 0;
+                margin: 0;
+                color: $base00;
+                font-size: $type-size-6;
+            }
+        }
+    }
+}

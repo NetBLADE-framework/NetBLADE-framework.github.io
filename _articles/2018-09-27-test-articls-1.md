@@ -1,10 +1,6 @@
 ---
 layout: single
 title:  "test blog 1"
-search: true
-categories: 
-  - blog
-  - test
 last_modified_at: 2021-06-24T08:05:34-05:00
 ---
 
