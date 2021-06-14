@@ -7,7 +7,9 @@ and open the template in the editor.
     Created on : Jun 13, 2021, 10:46:10 PM
     Author     : X-2
 */
-
+a{
+    text-decoration: none;
+}
 .row{
     flex-wrap: wrap;
     display: flex;
@@ -38,6 +40,9 @@ and open the template in the editor.
         ul{
             padding-left: 1em;
             color: $link-color;
+            &>li{
+              margin-bottom: 0.1em;  
+            }
         }
     }
 }
@@ -78,8 +83,8 @@ and open the template in the editor.
             h2{
                 padding: 0;
                 margin: 0;
-                font-size: $type-size-5;
-                font-weight: 500;
+                font-size: $type-size-9-c;
+                font-weight: 400;
                 a{
                    text-decoration: none;
                 }
@@ -100,8 +105,8 @@ and open the template in the editor.
                 margin: 0;
                 display: flex;
                 justify-content: space-between;
-                font-size: $type-size-5;
-                font-weight: 500;
+                font-size: $type-size-9-c;
+                font-weight: 400;
                 a,span{
                    text-decoration: none;
                    color: $link-color;
@@ -115,4 +120,7 @@ and open the template in the editor.
             }
         }
     }
+}
+.page__title{
+    font-weight: 500;
 }
