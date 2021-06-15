@@ -15,6 +15,7 @@ exclude:
 plugins:
   - jekyll-include-cache
   - jekyll-paginate
+  - jekyll-seo-tag
 
 atom_feed:
   hide: true
