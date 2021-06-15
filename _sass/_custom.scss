@@ -124,3 +124,17 @@ a{
 .page__title{
     font-weight: 500;
 }
+.index{
+    .entries-grid{
+        @include breakpoint($medium){
+            display: flex;
+            justify-content: space-between;
+        }
+        .grid__item{
+            @include breakpoint($medium){
+                margin-left: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
