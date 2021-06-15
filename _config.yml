@@ -38,12 +38,12 @@ collections:
  # Site Footer
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com"
+    # - label: "Twitter"
+    #   icon: "fab fa-fw fa-twitter-square"
+    #   url: "https://twitter.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com"
-    - label: "Linkedin"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://instagram.com"
+    # - label: "Linkedin"
+    #   icon: "fab fa-fw fa-linkedin"
+    #   url: "https://instagram.com"
