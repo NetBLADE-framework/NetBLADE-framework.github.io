@@ -4,4 +4,4 @@ parent: /techniques/19-invoice-abuse
 layout: item
 ---
 
-<p>The adversary will hide their true identity by providing fake details to the invoice process, examples would be using fake personal information such as a name, phone number, etc.</p>
+<p>The adversary will hide their true identity by providing fake details to the invoice process, such as name, phone number, etc.</p>
