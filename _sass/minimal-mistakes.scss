@@ -75,6 +75,12 @@ div.archive {
     text-align: center;
     padding-bottom: 10px;
     margin-bottom: 0;
+    @include breakpoint($x-large) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 0;
+    }
 }
 .grid__item h2.archive__item-title > a {
     color: $primary-color;

@@ -8,7 +8,7 @@ layout: collection
 collection: tactics
 entries_layout: grid
 show_excerpts: false
-
+classes: index
 author_profile: false
 sidebar: false
 ---
