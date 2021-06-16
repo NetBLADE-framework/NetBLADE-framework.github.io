@@ -9,21 +9,32 @@
 {% else %}
   {% assign title = post.title %}
 {% endif %}
-
-<div class="{{ include.type | default: 'list' }}__item">
+<div class="{{ include.type | default: 'list' }}__item {{ post.collection }}">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
         <img src="{{ teaser | relative_url }}" alt="">
       </div>
+    {% else if post.collection == 'videos' %}
+        <div class="archive__item-teaser">
+            {% include video id=post.video_id provider=post.provider %}
+        </div>
     {% endif %}
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      {% if post.link %}
-        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
-      {% else %}
-        <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
-      {% endif %}
-    </h2>
+    {% if post.collection != 'videos' %}
+        <h2 class="archive__item-title no_toc" itemprop="headline">
+          {% if post.link %}
+            <a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+          {% else %}
+            <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
+          {% endif %}
+          {% if post.collection == 'blogs' %}
+            <span>{{ post.date | date: "%B %Y" }}</span>
+          {% endif %}
+        </h2>
+        {% if post.collection == 'blogs' or post.collection == 'articles' %}
+            <p>{{ post.excerpt | strip_html | truncate: 100}}</p>
+        {% endif %}
+    {% endif %}
     {% include page__meta.html type=include.type %}
   </article>
 </div>

@@ -4,23 +4,11 @@
  * Licensed under MIT (https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE)
 */
 
-/* MG Cusotmisations */
-div.archive {
-    float: left;
-    width: 100%;
-}
+$primary-color: #fff; 
 
-.entries-grid > .grid__item {
-    border: 1px solid #888;
-    border-radius: 10px;
-    padding: 3px;
-    background-color: #ddd;
-}
 
-.grid__item h2.archive__item-title {
-    font-size: 12pt;
-}
-/* END*/
+$doc-font-size: 14 !default;
+
 
 /* Variables */
 @import "minimal-mistakes/variables";
@@ -56,3 +44,115 @@ div.archive {
 @import "minimal-mistakes/archive";
 @import "minimal-mistakes/sidebar";
 @import "minimal-mistakes/print";
+@import "custom";
+
+/* MG Cusotmisations */
+
+
+// Front-page customisations
+div.archive {
+    float: left;
+    width: 100%;
+}
+
+.entries-grid > .grid__item {
+    padding: 3px;
+    background-color: #000;
+    color: $primary-color;
+    
+}
+.grid__item .archive__item {
+    height: 3em;
+    position: relative;
+}
+.grid__item h2.archive__item-title {
+    font-size: 12pt;
+    font-weight: lighter;
+    position:absolute;
+    top: 0.5em;
+    height: 3em;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    @include breakpoint($x-large) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 0;
+    }
+}
+.grid__item h2.archive__item-title > a {
+    color: $primary-color;
+    text-decoration: none;
+    font-weight: 300;
+    &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 4px;
+        background: $primary-color;
+        width: 100%;
+        -webkit-transition: $global-transition;
+        transition: $global-transition;
+        -webkit-transform: scaleX(0) translate3d(0, 0, 0);
+        transform: scaleX(0) translate3d(0, 0, 0); // hide
+      }
+
+      &:hover:after {
+        -webkit-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+        transform: scaleX(1); // reveal
+      }
+}
+
+.masthead, .greedy-nav  {
+    background-color: #000;
+}
+
+.archive {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+// End of front-page
+
+// page content customisations
+.page__content p, .page__content li, .page__content dl {
+    font-size: 14pt;
+    
+}
+.page__content p{
+    font-weight: 300;
+}
+.archive p {
+    font-size: 14pt;
+    font-weight: 300;
+}
+
+.page {
+    @include breakpoint($large) {
+      float: right;
+      width: calc(100% - #{0px});
+      padding-right: 0px;
+    }
+  
+    @include breakpoint($x-large) {
+      width: calc(100% - #{0px});
+      padding-right: 0px;
+    }
+}
+
+// end of page content customisations
+
+// Logo customisations
+
+.site-logo img {
+    max-width: 200px;
+    min-width: 150px;
+    max-height: unset;
+}
+// End of logo customisations
+
+/* END*/

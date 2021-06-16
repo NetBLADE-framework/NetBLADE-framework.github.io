@@ -1,5 +1,5 @@
 main:
   - title: "Resources"
-    url: /docs/resources/
+    url: /pages/resources.html
   - title: "Contribute"
-    url: /docs/contribute/
+    url: /pages/contribute.html

@@ -1,0 +1,140 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : Jun 13, 2021, 10:46:10 PM
+    Author     : X-2
+*/
+a{
+    text-decoration: none;
+}
+.row{
+    flex-wrap: wrap;
+    display: flex;
+    .w{
+      &\-full{
+          width: 100%;
+      }
+      &\-20{
+        flex: 0 0 25%; 
+        max-width: 25%
+      }
+      &\-60{
+        flex: 0 0 50%; 
+        max-width: 50%
+      }
+    }
+} 
+.align{
+    &\-center{
+        align-items: center;
+    }
+}
+.page__content{
+    .pc_technique{
+        h2{
+            border-bottom:none;
+        }
+        ul{
+            padding-left: 1em;
+            color: $link-color;
+            &>li{
+              margin-bottom: 0.1em;  
+            }
+        }
+    }
+}
+.grid__item{
+    &.videos{
+        width: calc(100% - #{8px});
+        margin-right: 0;
+        margin-bottom: initial;
+        height: auto;
+        &:nth-child(4n){
+            margin-right: 0;
+        }
+        .archive__item{
+            height: auto;
+        }
+        .archive__item-teaser{
+            max-height: unset;
+        }
+        @include breakpoint($medium){
+            width: calc(50% - #{18px});
+        }
+        @include breakpoint($x-large){
+            width: calc(25% - #{18px});
+            margin-right: 16px;
+        }
+    }
+}
+.list__item{
+    &.articles{
+        .archive__item{
+            display: list-item;
+            color: $link-color;
+            margin-left: 1em;
+            margin-bottom: .6em;
+            &::marker{
+                font-size: .6em;
+            }
+            h2{
+                padding: 0;
+                margin: 0;
+                font-size: $type-size-9-c;
+                font-weight: 400;
+                a{
+                   text-decoration: none;
+                }
+            }
+            p{
+                padding: 0;
+                margin: 0;
+                color: $base00;
+                font-size: $type-size-6;
+            }
+        }
+    }
+    &.blogs{
+        .archive__item{
+            margin-bottom: .6em;
+            h2{
+                padding: 0;
+                margin: 0;
+                display: flex;
+                justify-content: space-between;
+                font-size: $type-size-9-c;
+                font-weight: 400;
+                a,span{
+                   text-decoration: none;
+                   color: $link-color;
+                }
+            }
+            p{
+                padding: 0;
+                margin: 0;
+                color: $base00;
+                font-size: $type-size-6;
+            }
+        }
+    }
+}
+.page__title{
+    font-weight: 500;
+}
+.index{
+    .entries-grid{
+        @include breakpoint($medium){
+            display: flex;
+            justify-content: space-between;
+        }
+        .grid__item{
+            @include breakpoint($medium){
+                margin-left: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
