@@ -9,7 +9,7 @@ layout: single
         <li>Send an email to <a href="mailto:blade@netacea.com?subject=BLADE Framework - contribute">blade@netacea.com</a>.</li>
     </ol>
 </p>
-	
+
 <p>The Core Contributors will review all submitted proposals for removals, alterations, and additions on a regular basis and approve, edit or reject them. Once approved (either as submitted or as ). Contributions will default to being credited. If you do not wish to be credited as a contributor below then please state as such in your communication.</p>
 <p>If you wish to contribute or propose anything other than changes or additions to definitions then please send an email to <a href="mailto:blade@netacea.com?subject=BLADE Framework - contribute">blade@netacea.com</a>. This proposal will be reviewed by the Core Contributors and (if agreed to) added to the roadmap for the Blade Framework Project.</p>
 <p>If you wish to join the Core Contributors team, then please send an email to <a href="mailto:blade@netacea.com?subject=BLADE Framework - join core contributors">blade@netacea.com</a>. Please include your name, job role, and any associated company with whom you work.</p>
@@ -46,10 +46,12 @@ On June 16th, 2021, the BLADE Framework was formally released as an open source 
     <li>Andy Still; Chief Technology Officer, Netacea</li>
     <li>Andy Ash; Head of Operations, Netacea</li>
     <li>Danielle Middleton-Wren; Head of Brand, Netacea</li>
+    <li>Mark Greenwood; Chief Technical Architect, Netacea</li>
     <li>Phil Hagerty; Chief Platform Architect, Netacea</li>
     <li>Leonardo Pizarro; Head of Digital Marketing, Netacea</li>
     <li>Yasmin Dugal; Technical Writer and Webinar Manager, Netacea</li>
     <li>Alex McConnell; Technical Writer & Webinar Manager, Netacea</li>
     <li>Grace Hadley; Graphic Designer, Netacea</li>
     <li>Matthew Jones; Legal Counsel, Netacea</li>
+    <li>Jonathan Care; Sr Director Analyst, Gartner</li>
 </ul>
