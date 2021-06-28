@@ -1,6 +1,6 @@
 ---
-title: Data Dumps (Infrastructure Acquisition)
-parent: /techniques/03-infrastructure-acquisition
+title: Data Dumps (Payment Detail Acquisition)
+parent: /techniques/04-payment-detail-acquisition
 layout: item
 ---
 
