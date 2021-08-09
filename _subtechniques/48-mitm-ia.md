@@ -1,6 +1,6 @@
 ---
-title: Man in the Middle (Infrastructure Acquisition)
-parent: /techniques/03-infrastructure-acquisition
+title: Man in the Middle (Payment Detail Acquisition)
+parent: /techniques/04-payment-detail-acquisition
 layout: item
 ---
 

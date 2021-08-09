@@ -1,6 +1,6 @@
 ---
-title: Phishing (Infrastructure Acquisition)
-parent: /techniques/03-infrastructure-acquisition
+title: Phishing (Payment Detail Acquisition)
+parent: /techniques/04-payment-detail-acquisition
 layout: item
 ---
 
