@@ -1,0 +1,11 @@
+---
+title: "Kill chain"
+permalink: /pages/kill-chain.html
+---
+{% assign tactics = site.collections | where:"label", "tactics" %}
+<pre id="jekyll-debug"></pre>
+<script>
+  var obj = JSON.parse(decodeURIComponent("{{ tactics | jsonify | uri_escape }}"));
+  var prettyJson = JSON.stringify(obj, null, 4);  // Pretty-printed JSON (indented 4 spaces).
+  document.getElementById("jekyll-debug").textContent = prettyJson;
+</script>
