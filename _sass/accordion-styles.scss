@@ -1,0 +1,89 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : Aug 11, 2021, 4:07:47 PM
+    Author     : X-2
+*/
+
+/* Accordion styles */
+$midnight: #e6e6e6;
+$clouds: #ecf0f1;
+
+.accordian-ex{
+    .tabs {
+        overflow: hidden;
+    }
+    .tab {
+        width: 100%;
+        color: white;
+        overflow: hidden;
+        margin-top: 7px;
+        margin-bottom: 7px;
+        &-label {
+            display: flex;
+            justify-content: space-between;
+            padding: 1em;
+            font-weight: 400;
+            background: $midnight;
+            cursor: pointer;
+            color: $link-color;
+            font-size: 0.65em;
+            /* Icon */
+            &:hover {
+                background: darken($midnight, 10%);
+            }
+            &::after {
+                content: "\25BA";
+/*                width: 1em;
+                height: 1em;*/
+                text-align: center;
+                transition: all .35s;
+                font-family: arial;
+            }
+            a{
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+        &-content {
+            max-height: 0;
+            padding: 0 1em;
+            color: $midnight;
+            background: white;
+            transition: all .35s;
+        }
+        &-close {
+            display: flex;
+            justify-content: flex-end;
+            padding: 1em;
+            font-size: 0.75em;
+            background: $midnight;
+            cursor: pointer;
+            &:hover {
+                background: darken($midnight, 10%);
+            }
+        }
+    }
+    input[type=checkbox] {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+    }
+    // :checked
+    input[type=checkbox]:checked {
+        + .tab-label {
+            background: darken($midnight, 10%);
+            &::after {
+                transform: rotate(90deg);
+            }
+        }
+        ~ .tab-content {
+            max-height: 100vh;
+            padding: 1em;
+        }
+    }
+}
