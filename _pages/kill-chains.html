@@ -1,0 +1,45 @@
+---
+title: "Kill chain"
+layout: archive
+permalink: /pages/kill-chains.html
+---
+{% capture written_label %}'None'{% endcapture %}
+
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+<div class="bootstrap-wrapper kill-chain">
+    <div class="container-fluid">
+        <div class="row">
+            {%for tactic in site.tactics %}
+            {% assign techniques = site.techniques | where_exp:"p", "p.parent == tactic.id" %}
+            <div class="col-12 col-lg-2 col-md-2">
+                <div class="row">
+                    <h2 class="__headings">
+                        {{tactic.title}}
+                        <a href="{{ tactic.url }}">{{ techniques | size}} Techniques</a>
+                    </h2>
+                    <div class="accordian-ex {% if forloop.first == true %}first{%endif%} {% if forloop.last == true %}last{%endif%}">
+                        <div class="tabs">
+                            {%for technique in techniques %}
+                            {% assign subtechniques = site.subtechniques | where_exp:"p", "p.parent == technique.id" %}
+                            <div class="tab">
+                                <input type="checkbox" id="{{ technique.slug }}-{{ forloop.index }}">
+                                <label class="tab-label" for="{{ technique.slug }}-{{ forloop.index }}">
+                                    <a href="{{ technique.url }}">{{technique.title}}</a>
+                                </label>
+                                <div class="tab-content">
+                                    <ul>
+                                        {%for subtechnique in subtechniques %}
+                                        <li><a href="{{ subtechnique.url }}">{{subtechnique.title}}</a></li>
+                                        {%endfor%}
+                                    </ul>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+</div>

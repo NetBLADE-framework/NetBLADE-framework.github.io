@@ -1,4 +1,6 @@
 main:
+  - title: "Kill Chains"
+    url: /pages/kill-chains.html
   - title: "Resources"
     url: /pages/resources.html
   - title: "Contribute"

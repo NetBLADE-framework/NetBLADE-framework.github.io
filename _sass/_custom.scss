@@ -138,3 +138,60 @@ a{
         }
     }
 }
+.kill-chain{
+    .__headings{
+        font-size: .80em;
+        padding: 1em .4em;
+        text-align: center;
+        width: 100%;
+        background: $footer-background-color;
+        min-height: 5em;
+        max-height: 5em;
+        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        &>a{
+            display: block;
+            font-size: .80em;
+            font-weight: 500;
+            width: 100%;
+        }
+    }
+    .accordian-ex{
+        padding-left: 7px;
+        padding-right: 7px;
+        max-width: 100%;
+        width: 100%;
+        &.first{
+            @include breakpoint($medium){
+                padding-left: 0;
+            }
+            @include breakpoint($x-large){
+                padding-left: 0;
+            }
+        }
+        &.last{
+            @include breakpoint($medium){
+                padding-right: 0;
+            }
+            @include breakpoint($x-large){
+                padding-right: 0;
+            }
+        }
+    }
+    .tab-content{
+        ul{
+           margin: 0;
+           padding: 0;
+           list-style: none;
+           li{
+               >a{
+                    color: #2586be;
+                    font-size: 0.60em;
+               }
+           }
+        }
+    }
+}

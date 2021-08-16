@@ -35,7 +35,7 @@ On June 16th, 2021, the BLADE Framework was formally released as an open source 
     <li>Richard Plumb; Director, Anora Security Ltd</li>
     <li>Simon Goldsmith; Lead for InfoSec Strategy, Programmes & Product Security, Adidas</li>
     <li>Damian Rivera; Adidas</li>
-    <li>Bia Kulintang</li>
+    <li>Bia Kulintang; Security Architect, Independent</li>
 </ul>
 
 <h2>Contributors</h2>

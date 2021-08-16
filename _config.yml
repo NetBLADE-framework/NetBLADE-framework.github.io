@@ -1,11 +1,11 @@
-title: "BLADE"
+title: "BLADE: Business Logic Attack Definition Framework"
 locale: "en-US"
-description: The NetBLADE framework for Bot attacks
-
+description: "The Business Logic Attack Definition (BLADE) Framework, is an open-source knowledge-base created to help cybersecurity professionals fight cyber threats."
+#tagline: "The BLADE framework for Bot attacks"
 remote_theme: "mmistakes/minimal-mistakes@4.23.0"
 
-logo: "/assets/Netblade_white_logo.svg"
-logo_footer: "/assets/Netblade_black_logo.svg"
+logo: "/assets/images/Netblade_white_logo.svg"
+logo_footer: "/assets/images/Netblade_black_logo.svg"
 masthead_title: false
 breadcrumbs: true
 exclude:
