@@ -14,17 +14,17 @@ a{
     flex-wrap: wrap;
     display: flex;
     .w{
-      &\-full{
-          width: 100%;
-      }
-      &\-20{
-        flex: 0 0 25%; 
-        max-width: 25%
-      }
-      &\-60{
-        flex: 0 0 50%; 
-        max-width: 50%
-      }
+        &\-full{
+            width: 100%;
+        }
+        &\-20{
+            flex: 0 0 25%; 
+            max-width: 25%
+        }
+        &\-60{
+            flex: 0 0 50%; 
+            max-width: 50%
+        }
     }
 } 
 .align{
@@ -41,7 +41,7 @@ a{
             padding-left: 1em;
             color: $link-color;
             &>li{
-              margin-bottom: 0.1em;  
+                margin-bottom: 0.1em;  
             }
         }
     }
@@ -86,7 +86,7 @@ a{
                 font-size: $type-size-9-c;
                 font-weight: 400;
                 a{
-                   text-decoration: none;
+                    text-decoration: none;
                 }
             }
             p{
@@ -108,8 +108,8 @@ a{
                 font-size: $type-size-9-c;
                 font-weight: 400;
                 a,span{
-                   text-decoration: none;
-                   color: $link-color;
+                    text-decoration: none;
+                    color: $link-color;
                 }
             }
             p{
@@ -185,27 +185,86 @@ a{
             }
         }
     }
-    .tab-content{
-        ul{
-           margin: 0;
-           padding: 0;
-           list-style: none;
-           li{
-               border-bottom: 1px solid $footer-background-color;
-               margin: 0;
-               padding: .5em 0;
-               display: inline-flex;
-               align-items: center;
-               width: 100%;
-               >a{
-                    color: #2586be;
-                    font-size: 0.60em;
-                    display: inline-block;
-               }
-               &:last-child{
-                   border-bottom: none;
-               }
-           }
+}
+/* home page grid */
+.home_page{
+    .accordian-ex{
+        .tab-label{
+            font-size: 12pt;
+            font-weight: lighter;
+            width: 100%;
+            text-align: center;
+            padding: 2em .5em;
+            margin-bottom: 0;
+            background: #000;
+            justify-content: center;
+            position: relative;
+            &:hover{
+                background: #000;
+            }
+            &::after {
+                content: "\25BA";
+                color: #fff;
+                text-align: center;
+                transition: all .35s;
+                font-family: arial;
+            }
+            & > a{
+                color: #fff;
+                text-decoration: none;
+                font-weight: 300;
+                padding-bottom: 1em;
+                margin-bottom: -1em;
+                display: block;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                width: 100%;
+                &:after{
+                    content: "";
+                    position: absolute;
+                    left: 3%;
+                    bottom: 25%;
+                    height: 4px;
+                    background: #fff;
+                    width: 94%;
+                    -webkit-transition: all 0.2s ease-in-out;
+                    transition: all 0.2s ease-in-out;
+                    -webkit-transform: scaleX(0) translate3d(0, 0, 0);
+                    transform: scaleX(0) translate3d(0, 0, 0);
+                }
+                &:hover{
+                    text-decoration: none;
+                    &:after{
+                        -webkit-transform: scaleX(1);
+                        transform: scaleX(1);
+                    }
+                }
+            }
+        }
+        .tab-content{
+            ul{
+                li{
+                    &>a{
+                        font-size: .75em;
+                    }
+                }
+            }
+        }
+        input[type=checkbox]:checked {
+            + .tab-label {
+                background: #000;
+            }
+        }
+    }
+    .container-fluid{
+        &>.row{
+            ._cust-pad{
+                padding-left: 0;
+            }
+            ._cust-pad:nth-child(n+6){
+                padding-right: 0;
+            }
         }
     }
 }

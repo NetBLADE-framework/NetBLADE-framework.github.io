@@ -1,0 +1,25 @@
+<div class="bootstrap-wrapper kill-chain">
+    <div class="container-fluid">
+        <div class="row">
+            {%for tactic in site.tactics %}
+            {% assign techniques = site.techniques | where_exp:"p", "p.parent == tactic.id" %}
+                <div class="col-12 col-lg-2 col-md-2">
+                    <div class="row">
+                        {% include elements/kc__tactic.html tactic=tactic techniques=techniques %}
+                        <div class="accordian-ex {% if forloop.first == true %}first{%endif%} {% if forloop.last == true %}last{%endif%}">
+                            <div class="tabs">
+                                {%for technique in techniques %}
+                                    {% assign subtechniques = site.subtechniques | where_exp:"p", "p.parent == technique.id" %}
+                                    <div class="tab">
+                                        {% include elements/kc__technique.html technique=technique %}
+                                        {% include elements/kc__subtechniques.html subtechniques=subtechniques %}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {%endfor%}
+        </div>
+    </div>
+</div>

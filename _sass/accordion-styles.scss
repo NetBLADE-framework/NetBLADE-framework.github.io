@@ -9,9 +9,6 @@ and open the template in the editor.
 */
 
 /* Accordion styles */
-$midnight: #e6e6e6;
-$clouds: #ecf0f1;
-
 .accordian-ex{
     .tabs {
         overflow: hidden;
@@ -55,6 +52,27 @@ $clouds: #ecf0f1;
             color: $midnight;
             background: white;
             transition: all .35s;
+            ul{
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                li{
+                    border-bottom: 1px solid $footer-background-color;
+                    margin: 0;
+                    padding: .5em 0;
+                    display: inline-flex;
+                    align-items: center;
+                    width: 100%;
+                    >a{
+                        color: #2586be;
+                        font-size: 0.60em;
+                        display: inline-block;
+                    }
+                    &:last-child{
+                        border-bottom: none;
+                    }
+                }
+            }
         }
         &-close {
             display: flex;
