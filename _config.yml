@@ -35,6 +35,8 @@ collections:
     output: true  
   videos:
     output: false
+  kill-chains:
+      output: true
  
  # Site Footer
 footer:
