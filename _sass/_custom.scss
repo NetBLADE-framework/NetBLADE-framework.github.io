@@ -47,7 +47,7 @@ a{
     }
 }
 .grid__item{
-    &.videos{
+    &.videos, &.reports{
         width: calc(100% - #{8px});
         margin-right: 0;
         margin-bottom: initial;
@@ -65,7 +65,7 @@ a{
             width: calc(50% - #{18px});
         }
         @include breakpoint($x-large){
-            width: calc(25% - #{18px});
+            width: calc(50% - #{25px});
             margin-right: 16px;
         }
     }

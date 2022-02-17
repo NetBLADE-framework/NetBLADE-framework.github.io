@@ -37,6 +37,8 @@ collections:
     output: false
   kill-chains:
       output: true
+  reports:
+      output: false
  
  # Site Footer
 footer:

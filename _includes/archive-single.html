@@ -15,15 +15,44 @@
       <div class="archive__item-teaser">
         <img src="{{ teaser | relative_url }}" alt="">
       </div>
+    {% else if post.collection == 'reports' %} 
+        <div class="archive__item-teaser reports">
+            <div class="col-xs-12 col-md-4">
+                <div 
+                    class="_df_book"
+                    height="600"
+                    forceFit="true" 
+                    autoEnableOutline="false" 
+                    autoEnableThumbnail="false" 
+                    overwritePDFOutline="false"
+                    direction="1" 
+                    pageSize="0" 
+                    pageMode="1" 
+                    singlePageMode="0"
+                    maxTextureSize="2048"
+                    webgl="false"
+                    singlePageMode="0" 
+                    backgroundcolor="#dadada" 
+                    paddingTop="10"
+                    paddingLeft="20"
+                    paddingRight="20"
+                    paddingBottom="0"
+                    source="{{ post.pdf_path }}"></div>
+            </div>
+        </div>
     {% else if post.collection == 'videos' %}
-        <div class="archive__item-teaser">
+        <div class="archive__item-teaser videos">
             {% include video id=post.video_id provider=post.provider %}
         </div>
     {% endif %}
-    {% if post.collection != 'videos' %}
+    {% if post.collection != 'videos' or post.collection != 'reports'  %}
         <h2 class="archive__item-title no_toc" itemprop="headline">
           {% if post.link %}
-            <a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+            <a href="{{ post.link }}">{{ title }}</a> 
+            <a href="{{ post.url | relative_url }}" rel="permalink">
+                <i class="fas fa-link" aria-hidden="true" title="permalink"></i>
+                <span class="sr-only">Permalink</span>
+            </a>
           {% else %}
             <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
           {% endif %}
