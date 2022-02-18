@@ -13,39 +13,14 @@
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
-        <img src="{{ teaser | relative_url }}" alt="">
+        <img src="{% if teaser contains "://" %}{{ teaser }}{% else %}{{ teaser | relative_url }}{% endif %}" alt=""/>
       </div>
-    {% else if post.collection == 'reports' %} 
-        <div class="archive__item-teaser reports">
-            <div class="col-xs-12 col-md-4">
-                <div 
-                    class="_df_book"
-                    height="600"
-                    forceFit="true" 
-                    autoEnableOutline="false" 
-                    autoEnableThumbnail="false" 
-                    overwritePDFOutline="false"
-                    direction="1" 
-                    pageSize="0" 
-                    pageMode="1" 
-                    singlePageMode="0"
-                    maxTextureSize="2048"
-                    webgl="false"
-                    singlePageMode="0" 
-                    backgroundcolor="#dadada" 
-                    paddingTop="10"
-                    paddingLeft="20"
-                    paddingRight="20"
-                    paddingBottom="0"
-                    source="{{ post.pdf_path }}"></div>
-            </div>
-        </div>
     {% else if post.collection == 'videos' %}
         <div class="archive__item-teaser videos">
             {% include video id=post.video_id provider=post.provider %}
         </div>
     {% endif %}
-    {% if post.collection != 'videos' or post.collection != 'reports'  %}
+    {% if post.collection != 'videos'  %}
         <h2 class="archive__item-title no_toc" itemprop="headline">
           {% if post.link %}
             <a href="{{ post.link }}">{{ title }}</a> 
@@ -54,12 +29,27 @@
                 <span class="sr-only">Permalink</span>
             </a>
           {% else %}
-            <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
+            {% if post.collection == 'reports'  %}
+            <a href="{% if post.download_file contains "://" %}{{ post.download_file }}{% else %}{{ post.download_file | relative_url }}{% endif %}" rel="permalink" target="_blank">{{ title }}</a>
+                <small>{{ post.date | date: "%d, %b %Y / %H:%m" }}</small> 
+            {% else %}
+                <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
+            {% endif %}
           {% endif %}
           {% if post.collection == 'blogs' %}
             <span>{{ post.date | date: "%B %Y" }}</span>
           {% endif %}
         </h2>
+        {% if post.collection == 'reports'  %}
+            <div class="download_li_icon">     
+                <a href="{% if post.download_file contains "://" %}{{ post.download_file }}{% else %}{{ post.download_file | relative_url }}{% endif %}" target="_blank">     
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" viewBox="0 0 18 24" fill="none">
+                        <path d="M8.93751 1.92e-05C8.38476 1.92e-05 7.93751 0.429394 7.93751 0.960019V15.84L1.70701 9.83042C1.31638 9.45542 0.683559 9.45542 0.292959 9.83042C-0.0976406 10.2054 -0.0976656 10.8129 0.292959 11.1879L8.23246 18.8117C8.27933 18.8549 8.33011 18.8942 8.38285 18.9317H8.42191L8.55277 18.9992H8.61332C8.65433 19.0142 8.6973 19.0255 8.74222 19.0311C8.80668 19.0386 8.87308 19.0386 8.93753 19.0311C9.00394 19.0386 9.07034 19.0386 9.13675 19.0311C9.17972 19.0255 9.22269 19.0142 9.26175 18.9992H9.3223L9.45316 18.9317H9.49222L9.64651 18.8117L17.582 11.1879C17.9726 10.8129 17.9726 10.2054 17.582 9.83042C17.1914 9.45544 16.5586 9.45542 16.168 9.83042L9.93746 15.8155V0.960019C9.93746 0.705019 9.83199 0.461251 9.64449 0.281251C9.45699 0.101251 9.20309 0 8.93744 0L8.93751 1.92e-05Z" transform="translate(0.0624695 0.446381)" fill="white"></path>
+                        <path d="M1 1.92H16.879C17.4317 1.92 17.879 1.49063 17.879 0.96C17.879 0.42936 17.4317 0 16.879 0H1C0.44725 0 0 0.429374 0 0.96C0 1.49064 0.447265 1.92 1 1.92Z" transform="translate(0.0604858 21.6336)" fill="white"></path>
+                    </svg>     
+                </a>
+            </div>
+        {% endif %}
         {% if post.collection == 'blogs' or post.collection == 'articles' %}
             <p>{{ post.excerpt | strip_html | truncate: 100}}</p>
         {% endif %}
