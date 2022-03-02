@@ -33,7 +33,7 @@ On June 16th, 2021, the BLADE Framework was formally released as an open source 
     <li>Liam Jones; Threat Research Analyst, Netacea</li>
     <li>Mark Greenwood; Chief Technical Architect, Netacea</li>
     <li>Richard Plumb; Director, Anora Security Ltd</li>
-    <li>Simon Goldsmith; Director of Information Security, OVO</li>
+    <li>Simon Goldsmith; Lead for InfoSec Strategy, Programmes & Product Security, Adidas</li>
     <li>Damian Rivera; Adidas</li>
     <li>Bia Kulintang; Security Architect, Independent</li>
 </ul>

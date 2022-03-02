@@ -10,14 +10,13 @@ permalink: /pages/resources.html
   {% if collection.output == false or collection.label ==  "articles" or collection.label == "blogs"  or collection.label == "videos" %}
     {% capture label %}{{ collection.label }}{% endcapture %}
     {% if label != written_label %}
-        <div style="clear: both"></div>
-        <h2 id="{{ label | slugify }}" class="archive__subtitle">{{ label | capitalize  }}</h2>
+      <h2 id="{{ label | slugify }}" class="archive__subtitle">{{ label | capitalize  }}</h2>
       {% capture written_label %}{{ label }}{% endcapture %}
     {% endif %}
   {% endif %}
   {% for post in collection.docs %}
     {% if collection.output == false or collection.label ==  "articles" or collection.label == "blogs"  or collection.label == "videos" %}
-        {% if collection.label == "videos"  or collection.label == "reports" %}
+        {% if collection.label == "videos"  %}
             {% include archive-single.html type = 'grid' %}
         {% else %}
             {% include archive-single.html %}
