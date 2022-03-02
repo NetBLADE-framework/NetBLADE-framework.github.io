@@ -1,0 +1,31 @@
+<div class="bootstrap-wrapper home_page">
+    <div class="container-fluid">
+        <div class="row">
+            {%for tactic in site.tactics %}
+                {% assign tactic_id_size = tactic.id | split: "/" | size %}
+                {% if tactic_id_size < 4 %}
+                    <div class="col-12 col-lg-2 col-md-2 _cust-pad tab">
+                        <div class="accordian-ex {% if forloop.first == true %}first{%endif%} {% if forloop.last == true %}last{%endif%}">
+                            <div class="tabs">
+                                <div class="tab">
+                                    <input type="checkbox" id="{{ tactic.slug }}-{{ forloop.index }}">
+                                    <label class="tab-label" for="{{ tactic.slug }}-{{ forloop.index }}">
+                                        <a href="{{ tactic.url }}" title="{{ tactic.title }}">{{ tactic.title }}</a>
+                                    </label>
+                                    <div class="tab-content">
+                                        <ul>
+                                            {% assign techniques = site.techniques | where_exp:"p", "p.parent == tactic.id" %}
+                                            {%for technique in techniques %}
+                                            <li><a href="{{ technique.url }}">{{technique.title}}</a></li>
+                                            {%endfor%}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {%endfor%}
+        </div>
+    </div>
+</div>
