@@ -1,9 +1,11 @@
 <div class="bootstrap-wrapper kill-chain">
     <div class="container-fluid">
         <div class="row">
-            {%for tactic in site.tactics %}
+            {% assign kc_tactics = site.tactics | where_exp: "p", "p.id contains page.slug" %}
+            {% assign kc_tactics_size = kc_tactics | size %}
+            {%for tactic in kc_tactics %}
             {% assign techniques = site.techniques | where_exp:"p", "p.parent == tactic.id" %}
-                <div class="col-12 col-lg-2 col-md-2">
+                <div class="col-12 {% if kc_tactics_size < 7 %}col-lg-{{ 12 | divided_by: kc_tactics_size | floor }} {% else %} col-lg-2  {% endif %}">
                     <div class="row">
                         {% include elements/kc__tactic.html tactic=tactic techniques=techniques %}
                         <div class="accordian-ex {% if forloop.first == true %}first{%endif%} {% if forloop.last == true %}last{%endif%}">
