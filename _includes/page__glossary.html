@@ -1,0 +1,36 @@
+<div class="bootstrap-wrapper glossary-kc">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="gl_sect">
+                <ul class="links_list">
+                    {% assign letters = "a b c d e f g h i j k l m n o p q r s t u v w x y z" | split: ' ' %}
+                    {% for letter in letters %}
+                        {% assign matched_kill_chain = "" | split,"" %}
+                        {% for kp in site.kill-chains %}
+                            {% assign ms = kp.title | slice: 0 | downcase %}
+                            {% assign mc = kp.title | slice: 0 | capitalize %}
+                            {% if ms == letter or mc == letter %}
+                                {% assign matched_kill_chain =  matched_kill_chain | push:kp %}
+                            {% endif %}
+                        {% endfor %}
+                        {% assign matched_kc_size = matched_kill_chain | size %}
+                        {% if matched_kc_size > 0 %}
+                        <li>
+                            <div class="link_alphabets_title">{{ letter | capitalize }}</div>
+                            <ul class="links_list_block">
+                                {% for page in matched_kill_chain %}
+                                <li>
+                                    <a href="{{ page.url }}" title="{{ page.title }}">
+                                        {{ page.title }}   
+                                    </a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

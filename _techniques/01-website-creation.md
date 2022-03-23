@@ -1,6 +1,6 @@
 ---
 title: Website Creation
-parent: /tactics/01-resource-development
+parent: /tactics/ad-click-bots-framework/01-resource-development
 layout: item
 ---
 
