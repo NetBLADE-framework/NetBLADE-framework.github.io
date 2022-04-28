@@ -1,0 +1,8 @@
+<h2 class="__headings">
+    {% if page.name != "index.md" %}
+        {{phase.title}}
+        <a href="{{ phase.url }}">{{ tactics | size}} Tactics</a>
+    {% else %}
+        <a href="{{ phase.url }}"> {{phase.title}} </a>
+    {% endif %}
+</h2>

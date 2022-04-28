@@ -1,0 +1,20 @@
+---
+layout: single
+---
+
+<p>{{ page.short-desc }}</p>
+{{content}}
+
+{% assign tactics = site.tactics | where_exp:"p", "p.parent == page.id" %}
+
+<div class="pc_tactic">
+    {% if tactics.size > 0 %}
+        <h2 class="h-2">Tactics</h2>
+        <ul>
+            {%for tactic in tactics %}
+                <li><a href="{{ tactic.url }}">{{tactic.ref-id}} {{tactic.title}}</a></li>
+            {%endfor%}
+        </ul>
+    {%endif%}
+
+</div>

@@ -22,9 +22,15 @@
     {% endif %}
     {% if post.collection != 'videos'  %}
         <h2 class="archive__item-title no_toc" itemprop="headline">
-          {% if post.link %}
+          {% if post.ext-link %}
+            {% if post.collection == 'blogs'%}
+              <a href="{{ post.ext-link }}">[External] {{ title }}</a> 
+            {% elsif post.collection == 'ext-references'%}
+              <a href="{{ post.ext-link }}"><b>{{post.publisher}}</b> - {{ title }}</a> 
+            {% endif %}
+          {% elsif post.link %}
             <a href="{{ post.link }}">{{ title }}</a> 
-            <a href="{{ post.url | relative_url }}" rel="permalink">
+            <a href="{{ post.link | relative_url }}" rel="permalink">
                 <i class="fas fa-link" aria-hidden="true" title="permalink"></i>
                 <span class="sr-only">Permalink</span>
             </a>
@@ -36,8 +42,8 @@
                 <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
             {% endif %}
           {% endif %}
-          {% if post.collection == 'blogs' %}
-            <span>{{ post.date | date: "%B %Y" }}</span>
+          {% if post.collection == 'blogs' or post.collection == 'ext-references' %}
+            <span>{{ post.date | date: "%-d %B %Y" }}</span>
           {% endif %}
         </h2>
         {% if post.collection == 'reports'  %}
@@ -50,7 +56,7 @@
                 </a>
             </div>
         {% endif %}
-        {% if post.collection == 'blogs' or post.collection == 'articles' %}
+        {% if post.collection == 'blogs' or post.collection == 'ext-references' %}
             <p>{{ post.excerpt | strip_html | truncate: 100}}</p>
         {% endif %}
     {% endif %}

@@ -1,0 +1,29 @@
+---
+title: "Phases"
+layout: overview
+permalink: /phases
+---
+{% capture written_label %}'None'{% endcapture %}
+
+<p>Phases describe the distinct stages that a business logic attack may progress through. The specific phases employed by an adversary during an attack and the order in which the attack progresses through them depend on the adversary's goal.</p>
+
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Description</th>
+    </thead>
+    <tbody>
+        {%for phase in site.phases %}
+            <tr>
+                <td><a href="{{ phase.url }}">{{ phase.title }}</a></td>
+                <td>
+                    {% if phase.short-desc %}
+                        {{ phase.short-desc | truncatewords:50 }}
+                    {% else %}
+                        {{ phase.excerpt | markdownify | strip_html | strip_newlines | escape_once | truncatewords:50 }}
+                    {%endif%}
+                </td>
+            </tr>
+        {%endfor%}
+    </tbody>
+</table>
