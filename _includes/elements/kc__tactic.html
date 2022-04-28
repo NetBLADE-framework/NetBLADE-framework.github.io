@@ -1,8 +1,4 @@
-<h2 class="__headings">
-    {% if page.name != "index.md" %}
-        {{tactic.title}}
-        <a href="{{ tactic.url }}">{{ techniques | size}} Techniques</a>
-    {% else %}
-        <a href="{{ tactic.url }}"> {{tactic.title}} </a>
-    {% endif %}
-</h2>
+<input type="checkbox" id="{{ tactic.slug }}-{{ forloop.index }}">
+<label class="tab-label" for="{{ tactic.slug }}-{{ forloop.index }}">
+    <a href="{{ tactic.url }}">{{tactic.title}}</a>
+</label>

@@ -1,0 +1,56 @@
+---
+title: "Matrix"
+layout: overview
+permalink: /matrix
+---
+{% capture written_label %}'None'{% endcapture %}
+
+<script>
+    function expandAll(){
+        var inputs = document.getElementsByTagName("input");
+        for(var i = 0; i < inputs.length; i++) {
+            if(inputs[i].type == "checkbox") {
+                inputs[i].checked = true; 
+            }  
+        }
+    }
+
+    function collapseAll(){
+        var inputs = document.getElementsByTagName("input");
+        for(var i = 0; i < inputs.length; i++) {
+            if(inputs[i].type == "checkbox") {
+                inputs[i].checked = false; 
+            }  
+        }
+    }
+
+    function viewTactics(){
+        collapseAll();
+        var inputs = document.getElementsByTagName("input");
+        for(var i = 0; i < inputs.length; i++) {
+            if(inputs[i].className == "tactic-checkbox") {
+                inputs[i].checked = true; 
+            }  
+        }
+
+    }
+</script>
+
+<p>The BLADE Framework matrix depicts the relationship between the phases, tactics and techniques that may be employed by an adversary during a business logic attack.</p>
+
+<table id="matrix">
+    <tr>
+        <td>View: </td>
+        <td><a href=#matrix onclick="collapseAll()">Phases Only</a></td>
+        <td>|</td>
+        <td><a href=#matrix onclick="viewTactics()">Phases and Tactics</a></td>
+        <td>|</td>
+        <td><a href=#matrix onclick="expandAll()">Full</a></td>
+    </tr>
+</table>
+
+{% include elements/blade__matrix.html %}
+
+<script>
+    expandAll();
+</script>

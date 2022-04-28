@@ -1,0 +1,36 @@
+---
+title: "Tactics"
+layout: overview
+permalink: /tactics
+---
+{% capture written_label %}'None'{% endcapture %}
+
+<p>Tactics describe the strategies that may be employed by adversaries during specific phases of business logic attacks. They are the high level activities that the adversary performs during each phase.</p>
+
+<table>
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Phase</th>
+    </thead>
+    <tbody>
+        {%for tactic in site.tactics %}
+            <tr>
+                <td><a href="{{ tactic.url }}" class="nowrap">{{ tactic.ref-id }}</a></td>
+                <td><a href="{{ tactic.url }}">{{ tactic.title }}</a></td>
+                <td>
+                    {% if tactic.short-desc %}
+                        {{ tactic.short-desc | truncatewords:50 }}
+                    {% else %}
+                        {{ tactic.excerpt | markdownify | strip_html | strip_newlines | escape_once | truncatewords:50 }}
+                    {%endif%}
+                </td>
+                {% assign phases = site.phases | where_exp:"p", "p.id == tactic.parent" %}
+                {%for phase in phases %}
+                    <td><a href="{{phase.url}}">{{phase.title}}</a></td>
+                {%endfor%}
+            </tr>
+        {%endfor%}
+    </tbody>
+</table>

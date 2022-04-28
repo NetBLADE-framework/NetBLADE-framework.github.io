@@ -1,7 +1,15 @@
 main:
+  - title: "Matrix"
+    url: /matrix
+  - title: "Phases"
+    url: /phases
+  - title: "Tactics"
+    url: /tactics
+  - title: "Techniques"
+    url: /techniques
   - title: "Kill Chains"
-    url: /pages/kill-chain.html
+    url: /kill-chains
   - title: "Resources"
-    url: /pages/resources.html
+    url: /resources
   - title: "Contribute"
-    url: /pages/contribute.html
+    url: /contribute

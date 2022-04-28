@@ -23,16 +23,16 @@ atom_feed:
 collections:
   pages:
     output: true
+  phases:
+    output: true
   tactics:
     output: true
   techniques:
     output: true
-  subtechniques:
-    output: true
   blogs:
-    output: true
-  articles:
-    output: true  
+    output: false
+  ext-references:
+    output: false  
   videos:
     output: false
   kill-chains:

@@ -1,6 +1,7 @@
 ---
 title: Contribute
 layout: single
+permalink: /contribute.html
 ---
 
 <p>If you wish to contribute to the framework by suggesting removals, alterations, or additions, then please either:
@@ -10,7 +11,7 @@ layout: single
     </ol>
 </p>
 
-<p>The Core Contributors will review all submitted proposals for removals, alterations, and additions on a regular basis and approve, edit or reject them. Once approved (either as submitted or as ). Contributions will default to being credited. If you do not wish to be credited as a contributor below then please state as such in your communication.</p>
+<p>The Core Contributors will review all submitted proposals for removals, alterations, and additions on a regular basis and approve, edit or reject them. Contributions will default to being credited once approved (either as submitted or as modified). If you do not wish to be credited as a contributor below then please state as such in your communication.</p>
 <p>If you wish to contribute or propose anything other than changes or additions to definitions then please send an email to <a href="mailto:blade@netacea.com?subject=BLADE Framework - contribute">blade@netacea.com</a>. This proposal will be reviewed by the Core Contributors and (if agreed to) added to the roadmap for the Blade Framework Project.</p>
 <p>If you wish to join the Core Contributors team, then please send an email to <a href="mailto:blade@netacea.com?subject=BLADE Framework - join core contributors">blade@netacea.com</a>. Please include your name, job role, and any associated company with whom you work.</p>
 
@@ -35,7 +36,8 @@ On June 16th, 2021, the BLADE Framework was formally released as an open source 
     <li>Richard Plumb; Director, Anora Security Ltd</li>
     <li>Simon Goldsmith; Director of Information Security, OVO</li>
     <li>Damian Rivera; Adidas</li>
-    <li>Bia Kulintang; Security Architect, Independent</li>
+    <li>Tommy Boyle; Senior Threat Researcher, Netacea</li>
+    <li>Cyril Noel-Tagoe; Principal Security Researcher, Netacea</li>
 </ul>
 
 <h2>Contributors</h2>
@@ -48,8 +50,8 @@ On June 16th, 2021, the BLADE Framework was formally released as an open source 
     <li>Danielle Middleton-Wren; Head of Brand, Netacea</li>
     <li>Mark Greenwood; Chief Technical Architect, Netacea</li>
     <li>Phil Hagerty; Chief Platform Architect, Netacea</li>
-    <li>Leonardo Pizarro; Head of Digital Marketing, Netacea</li>
-    <li>Yasmin Dugal; Technical Writer and Webinar Manager, Netacea</li>
+    <li>Leonardo Pizarro; Head of Demand Generation, PPC Protect</li>
+    <li>Yasmin Duggal; Technical Writer and Webinar Manager, Netacea</li>
     <li>Alex McConnell; Technical Writer & Webinar Manager, Netacea</li>
     <li>Grace Hadley; Graphic Designer, Netacea</li>
     <li>Matthew Jones; Legal Counsel, Netacea</li>

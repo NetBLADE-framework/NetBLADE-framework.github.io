@@ -1,0 +1,44 @@
+<div class="bootstrap-wrapper blade_framework">
+    <div class="container-fluid">
+        <div class="row">
+            {%for phase in site.phases %}
+                {% assign phase_id_size = phase.id | split: "/" | size %}
+                {% if phase_id_size < 4 %}
+                    <div class="col-12 col-lg-2 col-md-2 _cust-pad tab">
+                        <div class="accordian-ex {% if forloop.first == true %}first{%endif%} {% if forloop.last == true %}last{%endif%}">
+                            <div class="tabs">
+                                <div class="tab">
+                                    <input type="checkbox" class="tactic-checkbox" id="{{ phase.slug }}-{{ forloop.index }}">
+                                    <label class="tab-label" for="{{ phase.slug }}-{{ forloop.index }}">
+                                        <a href="{{ phase.url }}" title="{{ phase.title }}">{{ phase.title }}</a>
+                                    </label>
+                                    <div class="tab-content">
+                                        <ul>
+                                            {% assign tactics = site.tactics | where_exp:"p", "p.parent == phase.id" %}
+                                            {%for tactic in tactics %}
+                                            <li>
+                                                <input type="checkbox" class="technique-checkbox" id="{{ tactic.slug }}-{{ forloop.index }}">
+                                                <label class="tab-sublabel" for="{{ tactic.slug }}-{{ forloop.index }}">
+                                                    <a href="{{ tactic.url }}" title="{{ tactic.title }}">{{tactic.title}}</a>
+                                                </label>
+                                                <div class="tab-subcontent">
+                                                <ul>
+                                                    {% assign techniques = site.techniques | where_exp:"p", "p.parent contains tactic.id" %}
+                                                    {%for technique in techniques %}
+                                                    <li><a href="{{ technique.url }}">{{technique.title}}</a></li>
+                                                    {%endfor%}
+                                                </ul>
+                                                </div>
+                                            </li>
+                                            {%endfor%}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {%endfor%}
+        </div>
+    </div>
+</div>

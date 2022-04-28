@@ -7,32 +7,32 @@ layout: single
         <td>{{page.id}}</td>
     </tr>-->
     <tr>
-        {% if page.parent %}
+        {% if page.parent-url and page.parent-title %}
             <td>parent</td>
-            <td><a href="{{page.parent}}">{{page.parent}}</a></td>
+            <td><a href="{{page.parent-url}}">{{page.parent-title}}</a></td>
         {%endif%}
     </tr>
 </table>
 
 {{content}}
 
-{% assign techniques = site.techniques | where_exp:"p", "p.parent == page.id" %}
-{% assign subtechniques = site.subtechniques | where_exp:"p", "p.parent == page.id" %}
-<div class="pc_technique">
-    {% if techniques.size > 0 %}
-        <h2 class="h-2">Techniques</h2>
+{% assign tactics = site.tactics | where_exp:"p", "p.parent-url == page.id" %}
+{% assign techniques = site.techniques | where_exp:"p", "p.parent-url == page.id" %}
+<div class="pc_tactic">
+    {% if tactics.size > 0 %}
+        <h2 class="h-2">tactics</h2>
         <ul>
-            {%for technique in techniques %}
-                <li><a href="{{ technique.url }}">{{technique.title}}</a></li>
+            {%for tactic in tactics %}
+                <li><a href="{{ tactic.url }}">{{tactic.title}}</a></li>
             {%endfor%}
         </ul>
     {%endif%}
 
-    {% if subtechniques.size > 0 %}
-        <h2 class="h-2">Subtechniques</h2>
+    {% if techniques.size > 0 %}
+        <h2 class="h-2">techniques</h2>
         <ul>
-            {%for subtechnique in subtechniques %}
-                <li><a href="{{ subtechnique.url }}">{{subtechnique.title}}</a></li>
+            {%for technique in techniques %}
+                <li><a href="{{ technique.url }}">{{technique.title}}</a></li>
             {%endfor%}
         </ul>
     {%endif%}

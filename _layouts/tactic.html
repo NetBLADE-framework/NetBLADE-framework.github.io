@@ -1,0 +1,46 @@
+---
+layout: single
+---
+<table>
+    <tr>
+        <td>ID:</td>
+        <td>{{page.ref-id}}</td>
+    </tr>
+    {% if page.parent %}
+        <tr>
+            {% assign phases = site.phases | where_exp:"p", "p.id == page.parent" %}
+            <td>Phase:</td>
+            {%for phase in phases %}
+                <td><a href="{{phase.url}}">{{phase.title}}</a></td>
+            {%endfor%}
+        </tr>
+    {%endif%}
+</table>
+
+<p>{{ page.short-desc }}</p>
+
+{{ content }}
+
+{% assign techniques = site.techniques | where_exp:"p", "p.parent contains page.id" %}
+<div class="pc_tactic">
+    {% if techniques.size > 0 %}
+        <h2 class="h-2">Techniques</h2>
+        <ul>
+            {%for technique in techniques %}
+                <li><a href="{{ technique.url }}">{{technique.title}}</a></li>
+            {%endfor%}
+        </ul>
+    {%endif%}
+</div>
+
+{% assign killchains = site.kill-chains | where_exp:"p", "p.tactics contains page.title" %}
+<div class="pc_tactic">
+    {% if killchains.size > 0 %}
+        <h2 class="h-2">Related Kill Chains</h2>
+        <ul>
+            {%for killchain in killchains %}
+                <li><a href="{{ killchain.url }}">{{killchain.title}}</a></li>
+            {%endfor%}
+        </ul>
+    {%endif%}
+</div>
