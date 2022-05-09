@@ -36,7 +36,7 @@ On June 16th, 2021, the BLADE Framework was formally released as an open source 
     <li>Richard Plumb; Director, Anora Security Ltd</li>
     <li>Simon Goldsmith; Director of Information Security, OVO</li>
     <li>Damian Rivera; Adidas</li>
-    <li>Tommy Boyle; Senior Threat Researcher, Netacea</li>
+    <li>Thongchai Boyle; Senior Threat Researcher, Netacea</li>
     <li>Cyril Noel-Tagoe; Principal Security Researcher, Netacea</li>
 </ul>
 
