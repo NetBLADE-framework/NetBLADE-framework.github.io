@@ -12,6 +12,8 @@ exclude:
   - docker-compose.yml
   - README.md
 
+search: true
+
 plugins:
   - jekyll-include-cache
   - jekyll-paginate
