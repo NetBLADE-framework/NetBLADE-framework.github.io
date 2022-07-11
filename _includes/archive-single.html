@@ -37,7 +37,7 @@
           {% else %}
             {% if post.collection == 'reports'  %}
             <a href="{% if post.download_file contains "://" %}{{ post.download_file }}{% else %}{{ post.download_file | relative_url }}{% endif %}" rel="permalink" target="_blank">{{ title }}</a>
-                <small>{{ post.date | date: "%d, %b %Y / %H:%m" }}</small> 
+                <small>{{ post.date | date: "%d %b %Y" }}</small> 
             {% else %}
                 <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
             {% endif %}
