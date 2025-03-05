@@ -196,6 +196,52 @@ a{
             }
         }
     }
+    &.videos{
+        .archive__item{
+            margin-bottom: .6em;
+            h2{
+                padding: 0;
+                margin: 0;
+                display: flex;
+                justify-content: space-between;
+                font-size: $type-size-9-c;
+                font-weight: 400;
+                a,span{
+                    text-decoration: none;
+                    color: $link-color;
+                }
+            }
+            p{
+                padding: 0;
+                margin: 0;
+                color: $base00;
+                font-size: $type-size-6;
+            }
+        }
+    }
+    &.reports{
+        .archive__item{
+            margin-bottom: .6em;
+            h2{
+                padding: 0;
+                margin: 0;
+                display: flex;
+                justify-content: space-between;
+                font-size: $type-size-9-c;
+                font-weight: 400;
+                a,span{
+                    text-decoration: none;
+                    color: $link-color;
+                }
+            }
+            p{
+                padding: 0;
+                margin: 0;
+                color: $base00;
+                font-size: $type-size-6;
+            }
+        }
+    }
 }
 .page__title{
     font-weight: 500;

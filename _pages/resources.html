@@ -6,38 +6,26 @@ permalink: /resources
 <style>#page-title{display: none;}.archive{margin-top: 0;}</style>
 {% capture written_label %}'None'{% endcapture %}
 
-{% for collection in site.collections %}
-  {% if collection.label == "reports" or collection.label == "blogs"%}
-    {% capture label %}{{ collection.label }}{% endcapture %}
-    {% if label != written_label %}
-        <div style="clear: both"></div>
-        <h2 id="{{ label | slugify }}" class="archive__subtitle">{{ label | capitalize  }}</h2>
-      {% capture written_label %}{{ label }}{% endcapture %}
-    {% endif %}
-  {% endif %}
-  {% for post in collection.docs reversed%}
-    {% if collection.label == "reports" %}
-      {% include archive-single.html type = 'grid' %}
-    {% elsif collection.label == "blogs" %}
-      {% include archive-single.html %}
-    {% endif %}
-  {% endfor %}
+<div style="clear: both"></div>
+<h2 id="blogs" class="archive__subtitle">BLOGS</h2>
+{% for post in site.blogs reversed%}
+  {% include archive-single.html %}
 {% endfor %}
 
 <div style="clear: both"></div>
-<h2 id="{{ label | slugify }}" class="archive__subtitle">Videos</h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLEL_u1rVxV4Gvuc_gvKWLlkyEa1PLdLt4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2 id="reports" class="archive__subtitle">REPORTS</h2>
+{% for post in site.reports reversed%}
+  {% include archive-single.html %}
+{% endfor %}
 
-{% for collection in site.collections%}
-  {% if collection.label == "ext-references"%}
-    {% capture label %}{{ collection.label }}{% endcapture %}
-    {% if label != written_label %}
-      <div style="clear: both"></div>
-      <h2 id="{{ label | slugify }}" class="archive__subtitle">External References</h2>
-      {% capture written_label %}{{ label }}{% endcapture %}
-    {% endif %}
-    {% for post in collection.docs reversed%}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endif %}
+<div style="clear: both"></div>
+<h2 id="videos" class="archive__subtitle">VIDEOS</h2>
+{% for post in site.videos reversed%}
+  {% include archive-single.html %}
+{% endfor %}
+
+<div style="clear: both"></div>
+<h2 id="ext-references" class="archive__subtitle">EXTERNAL REFERENCES</h2>
+{% for post in site.ext-references reversed%}
+  {% include archive-single.html %}
 {% endfor %}
