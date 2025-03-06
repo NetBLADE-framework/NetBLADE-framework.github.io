@@ -21,13 +21,13 @@
     <!-- External links -->
     {% if post.ext-link %}
       {% if post.publisher %}
-        <a href="{{ post.ext-link }}"><b>{{post.publisher}}</b> - {{ title }}</a> 
+        <a href="{{ post.ext-link }}" target="_blank"><b>{{post.publisher}}</b> - {{ title }}</a> 
       {% else %}
-        <a href="{{ post.ext-link }}">[External] {{ title }}</a> 
+        <a href="{{ post.ext-link }}" target="_blank">[External] {{ title }}</a> 
       {% endif %}
     {% elsif post.link %}
-      <a href="{{ post.link }}">{{ title }}</a> 
-      <a href="{{ post.link | relative_url }}" rel="permalink">
+      <a href="{{ post.link }}" target="_blank">{{ title }}</a> 
+      <a href="{{ post.link | relative_url }}" rel="permalink" target="_blank">
           <i class="fas fa-link" aria-hidden="true" title="permalink"></i>
           <span class="sr-only">Permalink</span>
       </a>
