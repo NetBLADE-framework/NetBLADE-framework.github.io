@@ -187,10 +187,6 @@
       -webkit-transition: none;
       transition: none;
   
-      &:hover {
-        color: $masthead-link-color-hover;
-      }
-  
       &.site-logo {
         margin-left: 0;
         margin-right: 0.5rem;
@@ -198,6 +194,7 @@
         align-items: center;
         justify-content: center;
         gap: 10px;
+        
         @include breakpoint($medium) {
           gap: 20px;
         }
@@ -317,8 +314,8 @@
           position: absolute;
           left: 0;
           bottom: 0;
-          height: 4px;
-          background: $primary-color;
+          height: 2px;
+          background: $masthead-link-color;
           width: 100%;
           -webkit-transition: $global-transition;
           transition: $global-transition;

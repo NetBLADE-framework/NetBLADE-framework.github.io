@@ -3,7 +3,7 @@ title: Contribute
 layout: single
 permalink: /contribute.html
 ---
-
+<hr />
 <p>If you wish to contribute to the framework by suggesting removals, alterations, or additions, then please either:
     <ol type="a">
         <li>Submit a pull request with the proposed changes to the Github <a href="https://github.com/NetBLADE-framework/NetBLADE-framework.github.io">repository</a></li>
