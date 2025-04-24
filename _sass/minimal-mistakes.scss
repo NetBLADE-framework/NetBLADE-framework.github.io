@@ -110,7 +110,7 @@ div.archive {
 }
 
 .masthead, .greedy-nav  {
-    background-color: #000;
+    background-color: $header-background-color;
 }
 
 .archive {
@@ -147,14 +147,5 @@ div.archive {
 }
 
 // end of page content customisations
-
-// Logo customisations
-
-.site-logo img {
-    max-width: 200px;
-    min-width: 150px;
-    max-height: unset;
-}
-// End of logo customisations
 
 /* END*/

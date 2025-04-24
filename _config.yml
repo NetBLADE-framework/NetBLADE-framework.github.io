@@ -4,7 +4,8 @@ description: "The Business Logic Attack Definition (BLADE) Framework, is an open
 #tagline: "The BLADE framework for Bot attacks"
 remote_theme: "mmistakes/minimal-mistakes@4.23.0"
 
-logo: "/assets/images/Netblade_white_logo.svg"
+owasp: "/assets/images/Logo_owasp_black.svg"
+logo: "/assets/images/Netblade_black_logo.svg"
 logo_footer: "/assets/images/Netblade_black_logo.svg"
 masthead_title: false
 breadcrumbs: true

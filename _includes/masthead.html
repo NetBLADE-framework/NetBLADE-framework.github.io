@@ -1,11 +1,18 @@
 {% capture logo_path %}{{ site.logo }}{% endcapture %}
-
+{% capture owasp_path %}{{ site.owasp }}{% endcapture %}
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         {% unless logo_path == empty %}
-          <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
+          <a class="site-logo" href="{{ '/' | relative_url }}">
+            
+            {% unless owasp_path == empty %}
+             <img src="{{ owasp_path | relative_url }}" class="owasp" alt="OWASP">
+            {% endunless %}
+            
+            <img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}">
+          </a>
         {% endunless %}
         <a class="site-title" href="{{ '/' | relative_url }}" style="visibility: hidden; display: none;">BLADE
           <!--{{ site.masthead_title | default: site.title }}
@@ -18,6 +25,12 @@
             </li>
           {%- endfor -%}
         </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+        
         {% if site.search == true %}
         <button class="search__toggle" type="button">
           <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>
@@ -26,11 +39,6 @@
           </svg>
         </button>
         {% endif %}
-        <button class="greedy-nav__toggle hidden" type="button">
-          <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>
-          <div class="navicon"></div>
-        </button>
-        <ul class="hidden-links hidden"></ul>
       </nav>
     </div>
   </div>

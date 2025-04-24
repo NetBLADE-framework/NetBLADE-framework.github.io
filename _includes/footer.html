@@ -1,12 +1,10 @@
 <div class="page__footer-follow">
-    <div class="row align-center">
+    <div class="column-row align-center ">
         <div class="w-20" style="padding: 0 1em;">
             <img src="{{ site.logo_footer | relative_url }}" alt="{{ site.masthead_title | default: site.title }}" style="max-width: 110px;">
         </div>
-        <div class="w-60 fw-center">
-            <div class="w-full">
-                <div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}.</div>
-            </div>
+        <div class="fw-center">
+            <div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}.</div>
             <ul class="social-icons">
                 {% if site.data.ui-text[site.locale].follow_label %}
                   <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
@@ -24,9 +22,6 @@
                   <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
                 {% endunless %}
             </ul>
-        </div>
-        <div class="w-20">
-            
         </div>
     </div>
 </div>
