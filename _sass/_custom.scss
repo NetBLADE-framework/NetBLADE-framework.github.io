@@ -517,3 +517,68 @@ a{
         font-weight: 300;
     }
 }
+
+.page {
+    &__inner-wrap {
+        padding: 50px 20px;
+        margin-top: 0;
+
+        @include breakpoint($medium) {
+            padding: 50px;
+        }
+    }
+    
+    .page__content {
+        *.standfirst {
+            font-size: $type-size-3;
+            line-height: normal;
+            @include breakpoint($medium) {
+                font-size: $type-size-2;
+            }
+            @include breakpoint($large) {
+                font-size: $type-size-1;
+            }
+        }
+
+        .columns {
+                column-count: 1;
+                column-gap: 2em;
+
+                @include breakpoint($large) {
+                    column-count: 2;
+                }
+        }
+    }
+}
+
+
+
+a.button {
+    border-radius: 5px;
+    background-color: $link-color;
+    color: $dark-gray;
+    text-transform: uppercase; 
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    display: inline-flex;
+}
+
+.layout {
+    &--home{
+        background-image: url('/assets/images/spiral.png');
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: contain;
+
+        .page__content {
+            max-width: 100%;
+
+            @include breakpoint($x-large) {
+                max-width: 70%;
+            }
+        }
+    }
+}
