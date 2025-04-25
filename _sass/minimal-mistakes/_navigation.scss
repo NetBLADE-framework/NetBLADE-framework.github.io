@@ -10,20 +10,21 @@
     @include clearfix;
     margin: 0 auto;
     max-width: 100%;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding: 15px 20px;
     font-family: $sans-serif;
     -webkit-animation: $intro-transition;
     animation: $intro-transition;
     -webkit-animation-delay: 0.3s;
     animation-delay: 0.3s;
+    background-color: #000;
   
-    @include breakpoint($x-large) {
-      max-width: $x-large;
+    @include breakpoint($medium) {
+      padding: 15px 50px;
     }
   
     ol {
       padding: 0;
+      margin: 0;
       list-style: none;
       font-size: $type-size-6;
   
@@ -176,7 +177,6 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    min-height: $nav-height;
     background: $background-color;
   
     a {
@@ -187,13 +187,21 @@
       -webkit-transition: none;
       transition: none;
   
-      &:hover {
-        color: $masthead-link-color-hover;
-      }
-  
       &.site-logo {
         margin-left: 0;
         margin-right: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        
+        @include breakpoint($medium) {
+          gap: 20px;
+        }
+
+        .owasp {
+          margin: -10px 0;
+        }
       }
   
       &.site-title {
@@ -206,7 +214,35 @@
       transition: none;
     }
   
-    &__toggle {
+    .search__toggle {
+      -ms-flex-item-align: center;
+      align-self: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      border: 0;
+      outline: none;
+      color: $masthead-link-color;
+      background-color: $footer-background-color;
+      cursor: pointer;
+      padding: 26px 20px 26px 30px;
+      margin: -26px -20px -26px 10px;
+      clip-path: polygon(25% 0, 100% 0%, 100% 100%, 0% 100%);
+      font-size: $type-size-4;
+
+      &:hover {
+        color: $masthead-link-color-hover;
+      }
+
+      
+      @include breakpoint($medium) {
+        padding: 26px 50px 26px 65px;
+        margin: -26px -50px -26px 20px;
+      }
+    }
+
+    &__toggle[type="button"] {
       -ms-flex-item-align: center;
       align-self: center;
       height: $nav-toggle-height;
@@ -214,7 +250,43 @@
       outline: none;
       background-color: transparent;
       cursor: pointer;
+      z-index: 10;
+
+
+      .navicon, 
+      .navicon:before, 
+      .navicon:after {
+        background-color: $masthead-link-color;
+      }
+
+      &:hover .navicon, 
+      &:hover .navicon:before, 
+      &:hover .navicon:after {
+        background-color: $masthead-link-color-hover;
+      } 
+
+
+      &.close {
+        background-color: #ABF57A;
+
+        &:before{
+          opacity: 0.8;
+        }
+        
+        .navicon, 
+        &:hover .navicon {
+          background: none;
+        }
+         
+        &:hover .navicon:before, 
+        &:hover .navicon:after,
+        .navicon:before, 
+        .navicon:after {
+          background-color: #ABF57A;
+        }
+      }
     }
+  
   
     .visible-links {
       display: -webkit-box;
@@ -242,8 +314,8 @@
           position: absolute;
           left: 0;
           bottom: 0;
-          height: 4px;
-          background: $primary-color;
+          height: 2px;
+          background: $masthead-link-color;
           width: 100%;
           -webkit-transition: $global-transition;
           transition: $global-transition;
@@ -261,10 +333,11 @@
   
     .hidden-links {
       position: absolute;
-      top: 100%;
+      top: 150%;
       right: 0;
       margin-top: 15px;
       padding: 5px;
+      z-index: 11;
       border: 1px solid $border-color;
       border-radius: $border-radius;
       background: $background-color;
@@ -280,10 +353,10 @@
         margin: 0;
         padding: 10px 20px;
         font-size: $type-size-5;
-        color: $dark-gray;
+        color: $link-color;
         &:hover {
-          color: $masthead-link-color-hover;
-          background: $navicon-link-color-hover;
+          color: $masthead-link-color;
+          background:$link-color;
         }
       }
   
@@ -291,7 +364,7 @@
         content: "";
         position: absolute;
         top: -11px;
-        right: 10px;
+        right: calc(50% - 30px);
         width: 0;
         border-style: solid;
         border-width: 0 10px 10px;
@@ -304,7 +377,7 @@
         content: "";
         position: absolute;
         top: -10px;
-        right: 10px;
+        right: calc(50% - 30px);
         width: 0;
         border-style: solid;
         border-width: 0 10px 10px;

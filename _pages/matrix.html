@@ -42,9 +42,7 @@ permalink: /matrix
     <tr>
         <td>View: </td>
         <td><a href=#matrix onclick="collapseAll()">Phases Only</a></td>
-        <td>|</td>
         <td><a href=#matrix onclick="viewTactics()">Phases and Tactics</a></td>
-        <td>|</td>
         <td><a href=#matrix onclick="expandAll()">Full</a></td>
     </tr>
 </table>
@@ -52,5 +50,5 @@ permalink: /matrix
 {% include elements/blade__matrix.html %}
 
 <script>
-    expandAll();
+    viewTactics();
 </script>

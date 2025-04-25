@@ -14,10 +14,10 @@ $indent-var: 1.3em !default;
 
 /* system typefaces */
 $serif: Georgia, Times, serif !default;
-$sans-serif: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
+$sans-serif: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
   "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
 $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
-$roboto-font: "Roboto", "Segoe UI",
+$custom-font: "DM Sans", "Segoe UI",
   "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
 /* sans serif typefaces */
 $sans-serif-narrow: $sans-serif !default;
@@ -30,9 +30,9 @@ $bodoni: "Bodoni MT", serif !default;
 $calisto: "Calisto MT", serif !default;
 $garamond: Garamond, serif !default;
 
-$global-font-family: $roboto-font !default;
-$header-font-family: $roboto-font !default;
-$caption-font-family: $roboto-font !default;
+$global-font-family: $custom-font !default;
+$header-font-family: $custom-font !default;
+$caption-font-family: $custom-font !default;
 
 /* type scale */
 $type-size-1: 2.441em !default; // ~39.056px
@@ -56,21 +56,22 @@ $h-size-6: 1em !default; // ~16px
 /*
    Colors
    ========================================================================== */
-
-$gray: #7a8288 !default;
-$dark-gray: mix(#000, $gray, 50%) !default;
+$light-gray: #525252 !default;
+$gray: #262626  !default;
+$dark-gray: #09183F !default;
 $darker-gray: mix(#000, $gray, 60%) !default;
-$light-gray: mix(#fff, $gray, 50%) !default;
 $lighter-gray: mix(#fff, $gray, 90%) !default;
+$green: #ABF57A !default;
 
-$background-color: #fff !default;
+$background-color: $gray !default;
 $code-background-color: #fafafa !default;
 $code-background-color-dark: $light-gray !default;
-$text-color: $dark-gray !default;
+$text-color: #FFF !default;
 $muted-text-color: mix(#fff, $text-color, 20%) !default;
 $border-color: $lighter-gray !default;
 $form-background-color: $lighter-gray !default;
-$footer-background-color: #e6e6e6 !default;
+$footer-background-color: #FFF !default;
+$header-background-color: $green !default;
 
 $primary-color: #6f777d !default;
 $success-color: #3fa63f !default;
@@ -113,12 +114,12 @@ $youtube-color: #bb0000 !default;
 $xing-color: #006567 !default;
 
 /* links */
-$link-color: #2586be !default;
+$link-color: #ABF57A !default;
 $link-color-hover: mix(#000, $link-color, 25%) !default;
 $link-color-visited: mix(#fff, $link-color, 15%) !default;
-$masthead-link-color: $primary-color !default;
-$masthead-link-color-hover: mix(#000, $primary-color, 25%) !default;
-$navicon-link-color-hover: mix(#fff, $primary-color, 75%) !default;
+$masthead-link-color: $dark-gray !default;
+$masthead-link-color-hover: mix(#fff, $dark-gray, 50%) !default;
+$navicon-link-color-hover: mix(#fff, $dark-gray, 75%) !default;
 
 /* notices */
 $notice-background-mix: 80% !default;
@@ -151,7 +152,8 @@ $medium: 768px !default;
 $medium-wide: 900px !default;
 $large: 1024px !default;
 $x-large: 1280px !default;
-$max-width: $x-large !default;
+$xx-large: 1920px !default;
+$max-width: $xx-large !default;
 
 /*
    Grid
@@ -168,7 +170,7 @@ $right-sidebar-width-wide: 400px !default;
 $border-radius: 4px !default;
 $box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125) !default;
 $nav-height: 2em !default;
-$nav-toggle-height: 2rem !default;
+$nav-toggle-height: 1.5rem !default;
 $navicon-width: 1.5rem !default;
 $navicon-height: 0.25rem !default;
 $global-transition: all 0.2s ease-in-out !default;
