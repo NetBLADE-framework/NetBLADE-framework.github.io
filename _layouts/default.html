@@ -39,6 +39,59 @@
       </footer>
     </div>
 
+    <dialog class="cookie-popup" id="cookie-popup" role="dialog" aria-labelledby="cookie-popup-title" aria-describedby="cookie-popup-description">
+      <div class="cookie-popup__container">
+        <div class="cookie-popup__content">
+          <h2 id="cookie-popup-title" class="cookie-popup__title">Cookie Policy</h2>
+          <div class="cookie-popup__columns">
+            <p id="cookie-popup-description" class="cookie-popup__description">This website stores cookies on your computer. These cookies are used to collect information about how you interact with our website and allow us to remember you. We use this information in order to improve and customize your browsing experience and for analytics and metrics about our visitors both on this website and other media. To find out more about the cookies we use, see our <a href="https://netacea.com/privacy-policy/" target="_blank">Privacy Policy</a>.
+              <br/><br/>If you decline, your information won’t be tracked when you visit this website. A single cookie will be used in your browser to remember your preference not to be tracked.</p>
+            <div class="cookie-popup__buttons">
+              <button class="button" id="cookie-popup-decline" type="button">Decline</button>      
+              <button class="button" id="cookie-popup-accept" type="button">Accept</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const cookiePopup = document.getElementById('cookie-popup');
+        const acceptButton = document.getElementById('cookie-popup-accept');
+        const declineButton = document.getElementById('cookie-popup-decline');
+
+        // Check if the 'cookie-consent' cookie is set
+        const getCookie = (name) => {
+          const value = `; ${document.cookie}`;
+          const parts = value.split(`; ${name}=`);
+          if (parts.length === 2) return parts.pop().split(';').shift();
+        };
+
+        if (!getCookie('cookie-consent')) {
+          cookiePopup.classList.add('cookie-popup--visible');
+        }
+
+        // Set cookie function
+        const setCookie = (name, value, days) => {
+          const date = new Date();
+          date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+          document.cookie = `${name}=${value}; expires=${date.toUTCString()}; path=/`;
+        };
+
+        // Event listeners for buttons
+        acceptButton.addEventListener('click', () => {
+          setCookie('cookie-consent', 'yes', 365);
+          cookiePopup.classList.remove('cookie-popup--visible');
+        });
+
+        declineButton.addEventListener('click', () => {
+          setCookie('cookie-consent', 'no', 365);
+          cookiePopup.classList.remove('cookie-popup--visible');
+        });
+      });
+    </script>
+
     {% include scripts.html %}
   </body>
 </html>
