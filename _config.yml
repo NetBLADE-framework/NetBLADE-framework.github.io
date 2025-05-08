@@ -1,6 +1,6 @@
-title: "BLADE: Business Logic Attack Definition Framework"
+title: "OWASP BLADE: Business Logic Attack Definition Framework"
 locale: "en-US"
-description: "The Business Logic Attack Definition (BLADE) Framework, is an open-source knowledge-base created to help cybersecurity professionals fight cyber threats."
+description: "The OWSAP Business Logic Attack Definition (BLADE) Framework, is an open-source knowledge-base created to help cybersecurity professionals fight cyber threats."
 #tagline: "The BLADE framework for Bot attacks"
 remote_theme: "mmistakes/minimal-mistakes@4.23.0"
 
