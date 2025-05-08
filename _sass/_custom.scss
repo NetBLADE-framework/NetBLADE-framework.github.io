@@ -717,7 +717,8 @@ a{
                 font-size: $type-size-2;
             }
             @include breakpoint($large) {
-                font-size: $type-size-1;
+                font-size: 1.82rem;
+                line-height: 2rem;
             }
         }
 
@@ -879,6 +880,10 @@ hr{
     border-color: $green;
     margin-top: -5px;
     margin-bottom: 20px;
+}
+
+.search-content__form {
+    padding: 1em 0;
 }
 
 // Cookie Popup

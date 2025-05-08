@@ -56,17 +56,16 @@
     </dialog>
 
     <script>
+      const getCookie = (name) => {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+      };
+
       document.addEventListener('DOMContentLoaded', function () {
         const cookiePopup = document.getElementById('cookie-popup');
         const acceptButton = document.getElementById('cookie-popup-accept');
         const declineButton = document.getElementById('cookie-popup-decline');
-
-        // Check if the 'cookie-consent' cookie is set
-        const getCookie = (name) => {
-          const value = `; ${document.cookie}`;
-          const parts = value.split(`; ${name}=`);
-          if (parts.length === 2) return parts.pop().split(';').shift();
-        };
 
         if (!getCookie('cookie-consent')) {
           cookiePopup.classList.add('cookie-popup--visible');
@@ -81,15 +80,40 @@
 
         // Event listeners for buttons
         acceptButton.addEventListener('click', () => {
-          setCookie('cookie-consent', 'yes', 365);
+          setCookie('cookie-consent', JSON.stringify({ consent: 'yes', date: new Date().toISOString() }), 365);
           cookiePopup.classList.remove('cookie-popup--visible');
+          runAnalytics();
         });
 
         declineButton.addEventListener('click', () => {
-          setCookie('cookie-consent', 'no', 365);
+          setCookie('cookie-consent',  JSON.stringify({ consent: 'no', date: new Date().toISOString() }), 365);
           cookiePopup.classList.remove('cookie-popup--visible');
         });
+
+        
       });
+
+      function runAnalytics() {
+        const cookieConsent = getCookie('cookie-consent');
+        if (cookieConsent) {
+          const consentData = JSON.parse(cookieConsent);
+          if (consentData.consent === 'yes') {
+            const gtagScript = document.createElement('script');
+                gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-7R7JXK888C';
+                gtagScript.async = true;
+                document.head.appendChild(gtagScript);
+
+                gtagScript.onload = () => {
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag() {
+              dataLayer.push(arguments);
+                  }
+                  gtag('js', new Date());
+                  gtag('config', 'G-7R7JXK888C');
+                };
+          }
+          }
+        }
     </script>
 
     {% include scripts.html %}
