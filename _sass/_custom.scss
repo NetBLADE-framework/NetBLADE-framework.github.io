@@ -717,7 +717,8 @@ a{
                 font-size: $type-size-2;
             }
             @include breakpoint($large) {
-                font-size: $type-size-1;
+                font-size: 1.82rem;
+                line-height: 2rem;
             }
         }
 
@@ -733,7 +734,7 @@ a{
 }
 
 
-
+.button,
 a.button {
     border-radius: 5px;
     background-color: $link-color;
@@ -746,6 +747,7 @@ a.button {
     text-align: center;
     display: inline-flex;
     letter-spacing: 1.2px;
+    border: none;
 }
 
 .layout {
@@ -878,4 +880,92 @@ hr{
     border-color: $green;
     margin-top: -5px;
     margin-bottom: 20px;
+}
+
+.search-content__form {
+    padding: 1em 0;
+}
+
+// Cookie Popup
+
+.cookie-popup {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #0000005c;
+    backdrop-filter: blur(5px);
+    border: none;
+    z-index: 9999;
+    
+    &--visible {
+        display: flex;
+    }
+
+    &__container {
+        width: 100%;
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        border: none;
+        background: #000;
+        border-top: 1px solid $green;
+    }
+
+    &__content {
+        max-width: 1920px;
+        padding: 50px;
+        margin: 0 auto;
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    &__columns {
+        display: flex;
+        gap: 20px;
+        align-items: flex-end;
+        justify-content: space-between;
+        flex-direction: column;
+
+        @include breakpoint($medium) {
+            flex-direction: row;
+            gap: 100px;
+        }
+    }
+
+    &__title {
+        font-size: 1.25rem;
+        font-weight: 400;
+        color: $green;
+        margin: 0;
+        font-family: $global-font-family;
+    }
+
+    &__description {
+        font-size: 12px;
+        line-height: 1rem;
+        color: #fff;
+        margin: 0;
+        
+        @include breakpoint($medium) {
+            font-size: 0.75rem;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    #cookie-popup-decline{
+        background: $gray;
+        color: #a5a5a5;
+    }
 }
