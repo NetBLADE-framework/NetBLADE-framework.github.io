@@ -76,19 +76,23 @@
         };
 
         // Event listeners for buttons
-        acceptButton.addEventListener('click', () => {
-          setCookie('cookie-consent', JSON.stringify({ consent: 'yes', date: new Date().toISOString() }), 365);
-          cookiePopup.classList.remove('cookie-popup--visible');
-          runAnalytics();
-        });
-
-        declineButton.addEventListener('click', () => {
-          setCookie('cookie-consent',  JSON.stringify({ consent: 'no', date: new Date().toISOString() }), 365);
-          cookiePopup.classList.remove('cookie-popup--visible');
-        });
-
+        if(acceptButton && cookiePopup) {
+          acceptButton.addEventListener('click', () => {
+            setCookie('cookie-consent', JSON.stringify({ consent: 'yes', date: new Date().toISOString() }), 365);
+            cookiePopup.classList.remove('cookie-popup--visible');
+            runAnalytics();
+          });
+        }
+        if(declineButton && cookiePopup) {
+          declineButton.addEventListener('click', () => {
+            setCookie('cookie-consent', JSON.stringify({ consent: 'no', date: new Date().toISOString() }), 365);
+            cookiePopup.classList.remove('cookie-popup--visible');
+          });
+        }
+        runAnalytics();
         
       });
+
 
       function runAnalytics() {
         const cookieConsent = getCookie('cookie-consent');
