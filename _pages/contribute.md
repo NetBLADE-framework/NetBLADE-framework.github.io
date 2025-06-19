@@ -23,37 +23,32 @@ On June 16th, 2021, the BLADE Framework was formally released as an open source 
 
 <h2>Original Authors</h2>
 <ul>
-    <li>Matthew Gracey-McMinn; Head of Threat Research, Netacea</li>
+    <li>Matthew Gracey-McMinn; VP of Customer Security Operations, Netacea</li>
     <li>Antony Barnett; Threat Research Analyst, Netacea</li>
+    <li>Cyril Noel-Tagoe; Principal Threat Researcher, Netacea </li>
+    <li>Joshua Wood; Threat Researcher, Netacea </li>
     <li>Liam Jones; Threat Research Analyst, Netacea</li>
+    <li>Thongchai Boyle; Senior Threat Researcher, Netacea </li>
 </ul>
 <h2>Current Core Contributors</h2>
 <ul>
-    <li>Matthew Gracey-McMinn; Head of Threat Research, Netacea</li>
-    <li>Antony Barnett; Threat Research Analyst, Netacea</li>
-    <li>Liam Jones; Threat Research Analyst, Netacea</li>
-    <li>Mark Greenwood; Chief Technical Architect, Netacea</li>
-    <li>Richard Plumb; Director, Anora Security Ltd</li>
-    <li>Simon Goldsmith; Director of Information Security, OVO</li>
-    <li>Damian Rivera; Adidas</li>
+    <li>Andrew Ash; Field CISO, Netacea </li>
+    <li>Andrew Still; Chief Technical Officer, Netacea </li>
+    <li>Andrey Lipattsev; Partner Development Manager, Google </li>
+    <li>Cyril Noel-Tagoe; Principal Threat Researcher, Netacea </li>
+    <li>Faisal Rahman; Senior Director, Global Cyber Threat Intelligence, Walmart </li>
+    <li>Joshua Wood; Threat Researcher, Netacea</li>
+    <li>Liam Jones; Threat Researcher, Netacea</li>
+    <li>Mark Greenwood; VP of Engineering, Netacea</li>
+    <li>Matthew Gracey-McMinn; VP of Customer Security Operations, Netacea</li>
+    <li>Reece Baldwin; Director of Threat Intelligence, Kasada</li>
+    <li>Simon Goldsmith; Enterprise Security and Platforms Lead, OVO</li>
     <li>Thongchai Boyle; Senior Threat Researcher, Netacea</li>
-    <li>Cyril Noel-Tagoe; Principal Security Researcher, Netacea</li>
 </ul>
-
 <h2>Contributors</h2>
-<p>-</p>
-
-<h2>Additional Thanks</h2>
 <ul>
-    <li>Andy Still; Chief Technology Officer, Netacea</li>
-    <li>Andy Ash; Head of Operations, Netacea</li>
-    <li>Danielle Middleton-Wren; Head of Brand, Netacea</li>
-    <li>Mark Greenwood; Chief Technical Architect, Netacea</li>
-    <li>Phil Hagerty; Chief Platform Architect, Netacea</li>
-    <li>Leonardo Pizarro; Head of Demand Generation, PPC Protect</li>
-    <li>Yasmin Duggal; Technical Writer and Webinar Manager, Netacea</li>
-    <li>Alex McConnell; Technical Writer & Webinar Manager, Netacea</li>
-    <li>Grace Hadley; Graphic Designer, Netacea</li>
-    <li>Matthew Jones; Legal Counsel, Netacea</li>
-    <li>Jonathan Care; Sr Director Analyst, Gartner</li>
+    <li>Christopher De La Rosa; Senior Analyst – Cyber Fraud Intelligence, Target </li>
+    <li>Jonathan Care; Former Senior Director, Analyst, Gartner </li>
+    <li>Richard Plumb; Threat Operations Lead, Post Office Ltd </li>
 </ul>
+
