@@ -1,8 +1,8 @@
 ---
 title: Automated Bid
-parent: /tactics/17-sniping
+parent: /tactics/15-purchase
 ref-id: TEQ-056
-short-desc: The adversary's bot will make a bid on an auction automatically. This is generally done at the last possible moment (often to a fraction of a second) and with a bid the smallest amount higher that is possible than the prior highest bid so that no other actors have time to respond to the new highest bid, thereby ensuring the adversary wins the auction at minimal cost.
+short-desc: An adversary uses automated means to make a bid on a digital marketplace, generally far faster than any human could do so.
 layout: technique
 ---
 
