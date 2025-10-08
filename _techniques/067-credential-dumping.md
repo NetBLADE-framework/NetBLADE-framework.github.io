@@ -1,7 +1,7 @@
 ---
 title: Credential Dumping
-parent: /tactics/21-data-extraction
+parent: /tactics/43-information-release
 ref-id: TEQ-067
-short-desc: The adversary releases or sells credentials that should not be made publicly available. These are normally stolen from a system or victim and advertised on the open web or the dark web.
+short-desc: The adversary releases credentials that should not be made publicly available.
 layout: technique
 ---
