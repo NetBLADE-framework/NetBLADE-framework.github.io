@@ -14,7 +14,7 @@
                                     </label>
                                     <div class="tab-content">
                                         <ul>
-                                            {% assign tactics = site.tactics | where_exp:"p", "p.parent == phase.id" %}
+                                            {% assign tactics = site.tactics | where_exp:"p", "p.parent == phase.id" | sort: "title" %}
                                             {%for tactic in tactics %}
                                             <li>
                                                 <input type="checkbox" class="technique-checkbox" id="{{ tactic.slug }}-{{ forloop.index }}">
@@ -23,7 +23,7 @@
                                                 </label>
                                                 <div class="tab-subcontent">
                                                 <ul>
-                                                    {% assign techniques = site.techniques | where_exp:"p", "p.parent contains tactic.id" %}
+                                                    {% assign techniques = site.techniques | where_exp:"p", "p.parent contains tactic.id" | sort: "title" %}
                                                     {%for technique in techniques %}
                                                     <li><a href="{{ technique.url }}">{{technique.title}}</a></li>
                                                     {%endfor%}
