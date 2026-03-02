@@ -43,7 +43,7 @@
                 {% assign alltactics = site.tactics | where_exp:"p", "p.parent == phase.id" %}
                 {% for tactictitle in page.tactics %}
                     {% assign newkc_tactics = alltactics | where_exp:"p", "p.title == tactictitle" %}
-                    {% assign tactics = tactics | concat: newkc_tactics %}
+                    {% assign tactics = tactics | concat: newkc_tactics | sort: "title" %}
                 {%endfor%}
             
                 <div class="col-12 col-lg">
@@ -57,7 +57,7 @@
                                     {% assign alltechniques = site.techniques | where_exp:"p", "p.parent contains tactic.id" %}
                                     {% for techniquetitle in page.techniques %}
                                         {% assign newkc_techniques = alltechniques | where_exp:"p", "p.title == techniquetitle" %}
-                                        {% assign techniques = techniques | concat: newkc_techniques %}
+                                        {% assign techniques = techniques | concat: newkc_techniques | sort: "title" %}
                                     {%endfor%}
 
                                     <div class="tab">
