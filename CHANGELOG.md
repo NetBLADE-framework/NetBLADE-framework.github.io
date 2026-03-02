@@ -171,4 +171,5 @@
 - None
 
 ## Website
+- Renamed framework from Business Logic *Attack* Definition Framework to Business Logic *Abuse* Definition Framework and updated terminology accordingly. The term attack could imply an immediate need for remediation and force a binary response, such as blocking or not blocking. In cases of business logic abuse, multiple levers could be pulled to assist companies facing these challenges. Customers often need to make a business decision, not just a security decision
 - Tactics and techniques in Matrix and Killchain views are now displayed in alphabetical order
